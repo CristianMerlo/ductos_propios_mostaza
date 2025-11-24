@@ -91,6 +91,80 @@
         </div>
     </main>
 
+    <!-- Modal Ficha Técnica -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-id" id="modal-id">ID</div>
+                <h2 class="modal-title" id="modal-title">Nombre del Local</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-info-group">
+                    <div class="modal-info-item">
+                        <i class="fa-solid fa-location-dot text-indigo-600"></i>
+                        <div>
+                            <span class="modal-label">Dirección</span>
+                            <span class="modal-value" id="modal-direccion">-</span>
+                        </div>
+                    </div>
+                    <div class="modal-info-item">
+                        <i class="fa-solid fa-building text-indigo-600"></i>
+                        <div>
+                            <span class="modal-label">Complejo</span>
+                            <span class="modal-value" id="modal-complejo">-</span>
+                        </div>
+                    </div>
+                    <div class="modal-info-item">
+                        <i class="fa-solid fa-user text-indigo-600"></i>
+                        <div>
+                            <span class="modal-label">Gerente</span>
+                            <span class="modal-value" id="modal-gerente">-</span>
+                        </div>
+                    </div>
+                    <div class="modal-info-item">
+                        <i class="fa-solid fa-phone text-indigo-600"></i>
+                        <div>
+                            <span class="modal-label">Teléfono</span>
+                            <span class="modal-value" id="modal-telefono">-</span>
+                        </div>
+                    </div>
+                    <div class="modal-info-item">
+                        <i class="fa-solid fa-envelope text-indigo-600"></i>
+                        <div>
+                            <span class="modal-label">Email</span>
+                            <span class="modal-value" id="modal-email">-</span>
+                        </div>
+                    </div>
+                    <div class="modal-info-item">
+                        <i class="fa-solid fa-user-tie text-indigo-600"></i>
+                        <div>
+                            <span class="modal-label">Supervisor</span>
+                            <span class="modal-value" id="modal-supervisor">-</span>
+                        </div>
+                    </div>
+                    <div class="modal-info-item">
+                        <i class="fa-solid fa-broom text-indigo-600"></i>
+                        <div>
+                            <span class="modal-label">Frecuencia</span>
+                            <span class="modal-value" id="modal-frecuencia">-</span>
+                        </div>
+                    </div>
+                    <div class="modal-info-item">
+                        <i class="fa-solid fa-truck text-indigo-600"></i>
+                        <div>
+                            <span class="modal-label">Proveedor</span>
+                            <span class="modal-value" id="modal-proveedor">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Tu Lógica JS -->
     <script src="../script.js"></script>
 </body>
