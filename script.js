@@ -2,31 +2,31 @@
 
 // --- 1. DATOS (Base de Datos simulada desde CSV) ---
 const csvRaw = `LOCAL;REGION;LOCAL;Frecuencia;Proveedor;Enero;Febrero;Marzo;Abril;Mayo;Junio;Julio;Agosto;Septiembre;Octubre;Noviembre;Diciembre
-MWG;Alejandro Alvarez;WALMART GUAYMALLEN;Trimestral;QZ;;;;;;;;;;;;
-MBM;Alejandro Alvarez;BARRACAS MALL;Mensual;QZ;;;;;;;;;;;;
-MML;Alejandro Alvarez;LUJAN DE CUYO;Trimestral;QZ;;;;;;;;;;;;
-MMZ;Alejandro Alvarez;MENDOZA ;Mensual;QZ;;;;;;;;;;;;
-MAM ;Alejandro Alvarez;ARENA MAIPU;Trimestral;QZ;;;;;;;;;;;;
-MAE;Alejandro Alvarez;AEROPARQUE  ;Mensual;QZ;;;;;;;;;;;;
-MDO;Alejandro Alvarez;DOT;Trimestral;QZ;;;;;;;;;20-sept;;;
-MVZ;Alejandro Alvarez;CARREFOUR VELEZ;Bimestral;CR;;;;;;;;;;9-oct;MARTES 11/11;
-MCW;Alejandro Alvarez;WARNES;Bimestral;CR;;;;;;;;;22-sept;;;
-MST;Alejandro Alvarez;SAN MARTIN;Bimestral;CR;;;;;;;;;LOCAL CERRADO POR FALTA DE GAS;;;
-MNC;Alejandro Alvarez;NORCENTER ;Bimestral;CR;;;;;;;;;CANCELADO porque es ducto nuevo;;;
-MOT;Alejandro Alvarez;TORTUGUITA;Bimestral;CR;;;;;;;;;HABIA  OTRO PROVEEDOR EN EL LOCAL;;;
-MSF;Alejandro Alvarez;SOLEIL;Bimestral;CR;;;;;;;;;CANCELADO-LO REALIZA EL SHOPPING;;;
-MPP;Alejandro Alvarez;PASEO PILAR;Bimestral;CR;;;;;;;;;7-sept;;MARTES 04/11;
-MBP;Alejandro Alvarez;PACHECO;Bimestral;CR;;;;;;;;;24-sept;;JUEVES 06/11;
-MCT;Alejandro Alvarez;CONSTITUYENTES;Bimestral;CR;;;;;;;;;25-sept;;;
-MDV;Alejandro Alvarez;DEVOTO;Bimestral;CR;;;;;;;;;26-sept;;;
-MPA;Alejandro Alvarez;PANAMERICANA;Bimestral;CR;;;;;;;;;CANCELADO POR SOFIA;;;
-MSN;ALEJANDRO ALVAREZ;SALTA;Determinar;QZ;;;;;;;;;;;;
-MUN;ALEJANDRO ALVAREZ;UNICENTER;Bimestral;CR;;;;;;;;;CANCELADO-LO REALIZA EL SHOPPING;;CANCELADO;
-MCB;ALEJANDRO ALVAREZ;CASEROS;Bimestral;CR;;;;;;;;;18-sept;;LUNES 10/11;
-MPF;ALEJANDRO ALVAREZ;PUERTO DE FRUTO;Bimestral;CR;;;;;;;;;8-sept;;VIERNES 07/11;
-MTC;ALEJANDRO ALVAREZ;TIGRE CALLE;Bimestral;CR;;;;;;;;;CANCELADO-LO REALIZA EL SHOPPING;;LUNES 03/11;
+MWG;Yanina Solano;WALMART GUAYMALLEN;Trimestral;QZ;;;;;;;;;;;;
+MBM;Yanina Solano;BARRACAS MALL;Mensual;QZ;;;;;;;;;;;;
+MML;Yanina Solano;LUJAN DE CUYO;Trimestral;QZ;;;;;;;;;;;;
+MMZ;Yanina Solano;MENDOZA ;Mensual;QZ;;;;;;;;;;;;
+MAM ;Yanina Solano;ARENA MAIPU;Trimestral;QZ;;;;;;;;;;;;
+MAE;Yanina Solano;AEROPARQUE  ;Mensual;QZ;;;;;;;;;;;;
+MDO;Yanina Solano;DOT;Trimestral;QZ;;;;;;;;;20-sept;;;
+MVZ;Yanina Solano;CARREFOUR VELEZ;Bimestral;CR;;;;;;;;;;9-oct;MARTES 11/11;
+MCW;Yanina Solano;WARNES;Bimestral;CR;;;;;;;;;22-sept;;;
+MST;Yanina Solano;SAN MARTIN;Bimestral;CR;;;;;;;;;LOCAL CERRADO POR FALTA DE GAS;;;
+MNC;Yanina Solano;NORCENTER ;Bimestral;CR;;;;;;;;;CANCELADO porque es ducto nuevo;;;
+MOT;Yanina Solano;TORTUGUITA;Bimestral;CR;;;;;;;;;HABIA  OTRO PROVEEDOR EN EL LOCAL;;;
+MSF;Yanina Solano;SOLEIL;Bimestral;CR;;;;;;;;;CANCELADO-LO REALIZA EL SHOPPING;;;
+MPP;Yanina Solano;PASEO PILAR;Bimestral;CR;;;;;;;;;7-sept;;MARTES 04/11;
+MBP;Yanina Solano;PACHECO;Bimestral;CR;;;;;;;;;24-sept;;JUEVES 06/11;
+MCT;Yanina Solano;CONSTITUYENTES;Bimestral;CR;;;;;;;;;25-sept;;;
+MDV;Yanina Solano;DEVOTO;Bimestral;CR;;;;;;;;;26-sept;;;
+MPA;Yanina Solano;PANAMERICANA;Bimestral;CR;;;;;;;;;CANCELADO POR SOFIA;;;
+MSN;Yanina Solano;SALTA;Determinar;QZ;;;;;;;;;;;;
+MUN;Yanina Solano;UNICENTER;Bimestral;CR;;;;;;;;;CANCELADO-LO REALIZA EL SHOPPING;;CANCELADO;
+MCB;Yanina Solano;CASEROS;Bimestral;CR;;;;;;;;;18-sept;;LUNES 10/11;
+MPF;Yanina Solano;PUERTO DE FRUTO;Bimestral;CR;;;;;;;;;8-sept;;VIERNES 07/11;
+MTC;Yanina Solano;TIGRE CALLE;Bimestral;CR;;;;;;;;;CANCELADO-LO REALIZA EL SHOPPING;;LUNES 03/11;
 ;;;;;;;;;;;;;;;;
-MPAT;ALEJANDRO ALVAREZ;197;Bimestral;CR;;;;;;;;;9-sept;;MIERCOLES 05/11;
+MPAT;Yanina Solano;197;Bimestral;CR;;;;;;;;;9-sept;;MIERCOLES 05/11;
 MLA;GIMENA CONTE;NEUQUEN  3 ( LA ANONIMA );Mensual;Qz;;;;;;;;;;;;
 MNA;GIMENA CONTE;NEUQUEN 2  ALTO COMAHUE ;Mensual;Qz;;;;;;;;;;;;
 MNQ;GIMENA CONTE;NEUQUEN  1;Mensual;Qz;;;;;;;;;;;;
@@ -73,7 +73,7 @@ MSB;Jesica Espinoza;BAHIA SHOPPING;Bimestral;JTC;;;;;;;;;Cotizando;;;
 MLZ;Jesica Espinoza;LOMAS CENTRO;Bimestral;JTC;;;;;;;;;26-sept;JUEVES 16/10;;
 MPIL;Jesica Espinoza;LA PLATA 5;Bimestral;JTC;;;;;;;;;17-sept;MARTES 21/10;;
 MLC;Pablo Baena;AV LA PLATA CALLE;Bimestral;JTC;;;;;;;;;21-oct;MIERCOLES 15/10;;
-;Jesica Espinoza;LANUS AUTO;Bimestral;JTC;;;;;;;;;4-sept;JUEVES 16/10;;
+MLAA;Jesica Espinoza;LANUS AUTO;Bimestral;JTC;;;;;;;;;4-sept;JUEVES 16/10;;
 MAC;Pablo Baena;ACOYTE;Mensual;JTC;;;;;;;;;18-sept;LUNES 20/10;;
 MVC;Pablo Baena;CABALLITO ;Bimestral;CR;;;;;;;;;CANCELADO-LO REALIZA EL SHOPPING;;;
 MDI;Pablo Baena;DIAGONAL ;Bimestral;JTC;;;;;;;;;23-sept;MIERCOLES 22/10;;
@@ -105,68 +105,98 @@ MT2;JESICA ESPINOZA;FOOD TRUCK;VARIABLE;QZ;;;;;;;;;;;;`;
 // --- 2. FUNCIONES DE PROCESAMIENTO ---
 
 function parseCSV(csv) {
-    const lines = csv.split('\n');
-    const data = [];
+  const lines = csv.split('\n');
+  const data = [];
 
-    for (let i = 1; i < lines.length; i++) {
-        const row = lines[i].split(';');
-        if (row.length < 5) continue;
+  for (let i = 1; i < lines.length; i++) {
+    const row = lines[i].split(';');
+    if (row.length < 5) continue;
 
-        const item = {
-            id: row[0] || "S/D",
-            region: row[1] || "",
-            local: row[2] || "Sin Nombre",
-            frecuencia: row[3] || "Determinar",
-            proveedor: row[4] || "",
-            meses: [] // Array de 12 posiciones
-        };
+    const item = {
+      id: row[0] || "S/D",
+      region: row[1] || "",
+      local: row[2] || "Sin Nombre",
+      frecuencia: row[3] || "Determinar",
+      proveedor: row[4] || "",
+      meses: [] // Array de 12 posiciones
+    };
 
-        // Extraemos todos los meses (Indices 5 al 16)
-        for (let m = 5; m <= 16; m++) {
-            item.meses.push(row[m]);
-        }
-        data.push(item);
+    // Extraemos todos los meses (Indices 5 al 16)
+    for (let m = 5; m <= 16; m++) {
+      item.meses.push(row[m]);
     }
-    return data;
+    data.push(item);
+  }
+  return data;
 }
 
 const db = parseCSV(csvRaw);
 const tableBody = document.getElementById('tableBody');
 const searchInput = document.getElementById('searchInput');
 
+// --- 2.1 CARGA DE LINKS (links.csv) ---
+let linksMap = {};
+
+async function loadLinks() {
+  try {
+    const response = await fetch('links.csv');
+    if (!response.ok) throw new Error("No se pudo cargar links.csv");
+    const text = await response.text();
+    const lines = text.split('\n');
+
+    lines.forEach(line => {
+      const parts = line.split(';');
+      if (parts.length >= 2) {
+        const id = parts[0].trim();
+        const link = parts[1].trim();
+        if (id && link) {
+          linksMap[id] = link;
+        }
+      }
+    });
+    console.log("Links cargados:", Object.keys(linksMap).length);
+    render(); // Re-renderizar cuando carguen los links
+  } catch (e) {
+    console.warn("No se pudo cargar links.csv, usando búsqueda por defecto.", e);
+  }
+}
+
+loadLinks();
+
 // Determina el color del cuadro basado en el texto del CSV
 function getCellStyle(text) {
-    if (!text) return "bg-white";
-    const t = text.toLowerCase();
+  if (!text) return "bg-white";
+  const t = text.toLowerCase();
 
-    if (t.includes("cancelado") || t.includes("cerrado") || t.includes("fallida"))
-        return "bg-red-50 text-red-600 border border-red-100 font-bold";
+  if (t.includes("cancelado") || t.includes("cerrado") || t.includes("fallida"))
+    return "bg-red-50 text-red-600 border border-red-100 font-bold";
 
-    if (t.includes("cotizando") || t.includes("esperando"))
-        return "bg-amber-50 text-amber-600 border border-amber-100";
+  if (t.includes("cotizando") || t.includes("esperando"))
+    return "bg-amber-50 text-amber-600 border border-amber-100";
 
-    // Regla para fechas o confirmaciones
-    if (t.includes("sept") || t.includes("oct") || t.includes("nov") || t.includes("dic") || t.includes("/") || t.match(/\d/))
-        return "bg-emerald-50 text-emerald-600 border border-emerald-100 font-medium";
+  // Regla para fechas o confirmaciones
+  if (t.includes("sept") || t.includes("oct") || t.includes("nov") || t.includes("dic") || t.includes("/") || t.match(/\d/))
+    return "bg-emerald-50 text-emerald-600 border border-emerald-100 font-medium";
 
-    return "bg-slate-50 text-slate-400";
+  return "bg-slate-50 text-slate-400";
 }
 
 // --- 3. RENDERIZADO DE LA TABLA ---
 function render(filter = "") {
-    tableBody.innerHTML = "";
+  tableBody.innerHTML = "";
 
-    db.forEach(item => {
-        // Filtro de búsqueda
-        const str = `${item.local} ${item.region} ${item.id} ${item.frecuencia}`.toLowerCase();
-        if (!str.includes(filter)) return;
+  db.forEach(item => {
+    // Filtro de búsqueda
+    const str = `${item.local} ${item.region} ${item.id} ${item.frecuencia}`.toLowerCase();
+    if (!str.includes(filter)) return;
 
-        const tr = document.createElement('tr');
-        tr.className = "hover:bg-slate-50 border-b border-slate-100 transition-colors group h-12";
+    const tr = document.createElement('tr');
+    tr.className = "hover:bg-slate-50 border-b border-slate-100 transition-colors group h-12";
 
-        const driveLink = `https://drive.google.com/drive/search?q=${encodeURIComponent(item.id + " " + item.local)}`;
+    const searchLink = `https://drive.google.com/drive/search?q=${encodeURIComponent(item.id + " " + item.local)}`;
+    const driveLink = linksMap[item.id] || searchLink;
 
-        let html = `
+    let html = `
       <!-- 1. Columna Salud -->
       <td class="p-2 sticky left-0 bg-white group-hover:bg-slate-50 border-r border-slate-200 z-20 text-center">
          <div class="w-3 h-3 mx-auto rounded-full bg-slate-300 border border-slate-400 opacity-50"></div>
@@ -193,27 +223,27 @@ function render(filter = "") {
       </td>
     `;
 
-        // 4. Meses
-        item.meses.forEach(mesContent => {
-            const style = getCellStyle(mesContent);
-            let icon = "";
-            // Iconos para simplificar visualmente
-            if (style.includes("red")) icon = '<i class="fa-solid fa-xmark"></i>';
-            else if (style.includes("emerald")) icon = '<i class="fa-solid fa-check"></i>';
-            else if (style.includes("amber")) icon = '<i class="fa-solid fa-hourglass"></i>';
-            else if (mesContent) icon = '•';
+    // 4. Meses
+    item.meses.forEach(mesContent => {
+      const style = getCellStyle(mesContent);
+      let icon = "";
+      // Iconos para simplificar visualmente
+      if (style.includes("red")) icon = '<i class="fa-solid fa-xmark"></i>';
+      else if (style.includes("emerald")) icon = '<i class="fa-solid fa-check"></i>';
+      else if (style.includes("amber")) icon = '<i class="fa-solid fa-hourglass"></i>';
+      else if (mesContent) icon = '•';
 
-            html += `
+      html += `
         <td class="p-1 text-center border-r border-slate-50">
           <div class="w-full h-8 flex items-center justify-center text-[10px] rounded ${style}" title="${mesContent || ''}">
             ${icon}
           </div>
         </td>
       `;
-        });
+    });
 
-        // 5. Comentarios y Docs
-        html += `
+    // 5. Comentarios y Docs
+    html += `
       <td class="p-2 bg-slate-50 border-r border-slate-200">
         <input type="text" class="input-invisible text-xs text-slate-600 placeholder-slate-300">
       </td>
@@ -226,9 +256,9 @@ function render(filter = "") {
       </td>
     `;
 
-        tr.innerHTML = html;
-        tableBody.appendChild(tr);
-    });
+    tr.innerHTML = html;
+    tableBody.appendChild(tr);
+  });
 }
 
 // Iniciar Event Listener y Render
