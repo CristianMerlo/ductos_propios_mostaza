@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma de Ductos 2025</title>
+
+    <!-- Librería de Estilos: Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Librería de Iconos: FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!-- Tu CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-slate-50 min-h-screen font-sans text-slate-800 pb-10">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-200">
+        <div class="max-w-[1920px] mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-indigo-600 text-white p-2 rounded-lg">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-slate-900">Cronograma General de Ductos</h1>
+                    <p class="text-xs text-slate-500">Vista Anual Completa</p>
+                </div>
+            </div>
+
+            <!-- Buscador -->
+            <div class="mt-2 md:mt-0 relative w-full md:w-80">
+                <i class="fa-solid fa-search absolute left-3 top-2.5 text-slate-400 text-xs"></i>
+                <input type="text" id="searchInput" placeholder="Buscar Local, ID, Región..."
+                    class="w-full pl-8 pr-4 py-1.5 bg-slate-100 border border-slate-200 focus:bg-white focus:ring-2 focus:ring-indigo-500 rounded text-sm transition-all outline-none">
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main class="max-w-[1920px] mx-auto px-4 mt-6">
+        <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden">
+
+            <!-- Tabla con Scroll -->
+            <div class="overflow-x-auto pb-4 custom-scrollbar">
+                <table class="w-full text-left border-collapse whitespace-nowrap">
+                    <thead>
+                        <tr
+                            class="bg-slate-100 text-xs font-bold text-slate-600 uppercase tracking-wider border-b border-slate-300 h-10">
+
+                            <!-- Columnas Fijas (Sticky) -->
+                            <th
+                                class="p-2 sticky left-0 bg-slate-100 z-30 border-r border-slate-300 text-center w-12 min-w-[3rem]">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </th>
+                            <th
+                                class="p-2 sticky left-12 bg-slate-100 z-30 border-r border-slate-300 min-w-[280px] shadow-lg">
+                                ID - Local
+                            </th>
+
+                            <!-- Columnas Normales -->
+                            <th class="p-2 text-center w-20 border-r border-slate-200">Frec.</th>
+
+                            <!-- Meses -->
+                            <th class="p-1 w-12 text-center text-[10px]">Ene</th>
+                            <th class="p-1 w-12 text-center text-[10px]">Feb</th>
+                            <th class="p-1 w-12 text-center text-[10px]">Mar</th>
+                            <th class="p-1 w-12 text-center text-[10px]">Abr</th>
+                            <th class="p-1 w-12 text-center text-[10px]">May</th>
+                            <th class="p-1 w-12 text-center text-[10px]">Jun</th>
+                            <th class="p-1 w-12 text-center text-[10px]">Jul</th>
+                            <th class="p-1 w-12 text-center text-[10px]">Ago</th>
+                            <th class="p-1 w-12 text-center text-[10px]">Sep</th>
+                            <th class="p-1 w-12 text-center text-[10px]">Oct</th>
+                            <th class="p-1 w-12 text-center text-[10px]">Nov</th>
+                            <th class="p-1 w-12 text-center text-[10px] border-r border-slate-200">Dic</th>
+
+                            <!-- Extras -->
+                            <th class="p-2 min-w-[200px] bg-slate-50 border-r border-slate-200">Comentarios</th>
+                            <th class="p-2 text-center min-w-[80px]">Docs</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody" class="text-sm text-slate-700 divide-y divide-slate-100">
+                        <!-- JS inyectará filas aquí -->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Tu Lógica JS -->
+    <script src="../script.js"></script>
+</body>
+
+</html>

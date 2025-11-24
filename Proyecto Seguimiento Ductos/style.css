@@ -1,0 +1,38 @@
+/* style.css */
+
+/* Personalización de la barra de scroll para que se vea moderna */
+.custom-scrollbar::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    /* slate-100 */
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    /* slate-300 */
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+    /* slate-400 */
+}
+
+/* Clases de utilidad para inputs invisibles */
+.input-invisible {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.input-invisible:focus {
+    border-color: #a5b4fc;
+    /* indigo-300 */
+}
