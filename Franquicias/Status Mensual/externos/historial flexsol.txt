@@ -1,0 +1,9 @@
+Mes	Cantidad de Servicios (Real)
+Agosto	7
+Septiembre	35
+Octubre	18
+Noviembre	9
+Diciembre	3
+TOTAL	72
+
+Actualmente tienen pendiente de terminar La Rioja (envio de equipo desde Franquicia), La Plata 3 (esperando aprobación de presupuesto), preventivos en franquicia de MDQ (esperando aprobación)

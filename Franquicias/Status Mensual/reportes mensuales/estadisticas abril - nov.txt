@@ -1,0 +1,53 @@
+
+
+Aquí tienes el Informe General Unificado (Abril - Noviembre) actualizado con el contexto estratégico que mencionaste.
+
+Este documento consolida la evolución operativa, integrando las causas del crecimiento exponencial de tickets y el análisis de desempeño del equipo.
+
+📊 Informe de Gestión de Mantenimiento: Abril - Noviembre
+
+1. Resumen Ejecutivo
+El periodo analizado refleja un éxito operativo que ha derivado en un crecimiento exponencial de la demanda. La gestión pasó de procesar 57 tickets en Abril a un récord de 178 tickets en Noviembre (+212%).
+
+Este incremento no se debe a un deterioro de los activos, sino a dos decisiones estratégicas clave:
+
+Ampliación del Alcance: Se extendió el servicio de mantenimiento a una mayor variedad de equipos, dejando de focalizarse únicamente en cafeteras.
+Efectividad y Confianza: La alta capacidad resolutiva del equipo técnico interno incentivó a las franquicias a dejar de contratar técnicos externos y canalizar todos sus requerimientos a través del sistema interno.
+2. Tabla Maestra de Evolución Mensual
+Resumen consolidado de la actividad mes a mes:
+
+MES	TICKETS TOTALES	TÉCNICO MÁS ACTIVO (MVP)	LOCAL CON MÁS TICKETS
+Abril	57	Amaldo Gonz (75%)	Cabildo
+Mayo	64	Amaldo Gonz (59%)	Cabildo
+Junio	80	Pablo Aviles / Amaldo (Empate)	San Martín
+Julio	40*	Matias / Pablo (Empate)	Pompeya
+Agosto	102	Matias Albarracín (51%)	Pompeya
+Sept	81	Matias / Pablo (Empate)	Quilmes
+Octubre	100	Matias Albarracín (53%)	Boedo
+Noviembre	178	Pablo Aviles (46%)	Palmas del Pilar
+TOTAL	702	Pablo Aviles (Consistencia)	Cabildo / Pompeya
+*Nota Julio: Datos correspondientes a la primera quincena disponible.
+
+3. Análisis del Crecimiento de la Demanda
+El gráfico de volumen muestra tres etapas claras que validan la estrategia de centralización del mantenimiento:
+
+Etapa de Estabilidad (Abril - Junio): Promedio de 67 tickets/mes. El servicio estaba focalizado y dependía de un técnico principal.
+Etapa de Transición (Agosto - Octubre): El volumen salta a ~100 tickets/mes. Comienza a notarse la migración de las franquicias hacia el servicio interno debido a la mejora en los tiempos de respuesta.
+Etapa de Expansión (Noviembre): Explosión a 178 tickets. Se consolida la ampliación del servicio a nuevos equipos (no solo café). El sistema absorbe exitosamente la demanda que antes se fugaba a proveedores externos.
+4. Análisis de Desempeño Técnico (Evolución del Equipo)
+La estructura del equipo se adaptó dinámicamente al aumento de carga a través de tres fases:
+
+Fase 1: La Era de Amaldo (Q2)
+Operación centralizada. Amaldo resolvía 3 de cada 4 problemas.
+Fase 2: Liderazgo de Matias Albarracín (Q3)
+Ante el primer aumento de demanda, Matias asumió el rol protagónico, resolviendo más del 50% de los casos en los meses de Agosto y Octubre.
+Fase 3: La Nueva Estructura con Pablo Aviles (Noviembre)
+Con el volumen récord, el equipo se renovó. Pablo Aviles, quien mostró la mayor consistencia durante todo el año (presente en los 8 meses), asumió el liderazgo absoluto en Noviembre (83 tickets).
+Se integraron efectivamente nuevos técnicos (Bruno Leyes y Mauro Husak) para soportar la diversificación de equipos a reparar.
+5. Análisis de Infraestructura (Locales)
+La distribución de incidentes muestra cómo la efectividad técnica ha ido "apagando fuegos" en distintas zonas, haciendo que los reportes roten geográficamente:
+
+Cabildo: Fue el foco crítico inicial (Abril/Mayo). Gracias a las intervenciones, dejó de ser el líder de problemas en el segundo semestre, aunque mantiene una demanda basal constante.
+Pompeya y Zona Sur: Al mejorar la respuesta en Capital, surgieron los reportes de la zona Sur (La Plata, Quilmes, Pompeya), que dominaron el tercer trimestre.
+Zona Norte (Pilar/San Fernando): En Noviembre, al ampliarse el servicio a más equipos, estas sucursales pasaron a liderar el ranking, evidenciando que tenían necesidades de mantenimiento (en otros equipos) que antes no se reportaban al sistema central.
+

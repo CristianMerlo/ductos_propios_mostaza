@@ -1,0 +1,149 @@
+:root {
+    --brand-red: #DA291C;
+    --brand-yellow: #FFC72C;
+    --brand-dark: #1a1a1a;
+    --panel-bg: rgba(30, 30, 30, 0.7);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--brand-dark);
+    color: #f3f4f6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-condensed {
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 0.05em;
+}
+
+/* Glassmorphism */
+.glass-panel {
+    background: var(--panel-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+}
+
+/* Gradients */
+.bg-main-gradient {
+    background: radial-gradient(circle at center, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+.bg-pattern {
+    background-image: url("https://www.transparenttextures.com/patterns/dark-matter.png");
+}
+
+/* Slides */
+.slide {
+    min-height: 100vh;
+    scroll-snap-align: start;
+}
+
+/* Headers */
+.brand-header {
+    background: linear-gradient(to right, #000 0%, #333 100%);
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    border-bottom: 2px solid var(--brand-red);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+}
+
+/* Navigation Dots */
+.dot-nav {
+    border: 2px solid transparent;
+}
+
+.dot-nav.active {
+    background-color: var(--brand-yellow);
+    border-color: var(--brand-red);
+    box-shadow: 0 0 15px var(--brand-yellow);
+}
+
+/* Typography & Badges */
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    line-height: 1;
+}
+
+.badge-red {
+    background-color: var(--brand-red);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 900;
+    padding: 0.25rem 0.75rem;
+    letter-spacing: 0.2em;
+}
+
+.badge-yellow {
+    background-color: var(--brand-yellow);
+    color: black;
+    font-size: 0.7rem;
+    font-weight: 900;
+    padding: 0.25rem 0.75rem;
+    letter-spacing: 0.2em;
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: var(--brand-red);
+    color: white;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    border-radius: 2px;
+    box-shadow: 0 4px 0 #991b1b;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #991b1b;
+}
+
+.btn-primary:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+/* Animations */
+@keyframes fade-down {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-down {
+    animation: fade-down 1s ease-out forwards;
+}
+
+/* Chart Customization Labels */
+.chart-container {
+    position: relative;
+    height: 100%;
+}

@@ -1,0 +1,40 @@
+PRESUPUESTO DE SERVICIO TÉCNICO INTEGRAL
+Cliente: Franquicia Junín (Mostaza)
+Ticket Ref: TK 104087
+Fecha: 28/01/2025
+Cotización Ref: 1 USD = $ 1.450 ARS
+
+DESCRIPCIÓN DEL SERVICIO
+Movilización de técnico especialista a sede Junín para realizar reparaciones críticas y mantenimiento preventivo.
+Modalidad: Visita con estadia (2 días).
+Logística: Viaje en Micro Larga Distancia + Alojamiento en Hotel Económico.
+Alcance Técnico:
+
+Cafeteras Cimballi: Reparación de pérdida de agua (Equipo 1) y Sistema de Molienda (Equipo 2).
+Broiler: Reparación de encendido (Cambio de chispero) y limpieza profunda de tracción.
+Preventivos: Limpieza condensadores (Cattabriga) y revisión general cocina (Freidoras).
+DETALLE DE COSTOS FIJOS (Común a ambas opciones)
+Estos costos son necesarios independientemente de si se instalan los kits de mejora o no.
+Honorarios Técnicos (18.5 Horas Totales: 9h Labor + 9.5h Viaje a $25/h): USD 462,50
+Logística y Viáticos (Pasajes + Hotel + Traslados = aprox. $182.000 ARS): USD 125,50
+Repuesto Crítico (1 Ignitor Alternativo Broiler): USD 96,00
+Insumos Menores (O-rings, sellos básicos, limpieza): USD 30,00
+SUBTOTAL OPERATIVO: USD 714,00
+
+OPCIONES DE INVERSIÓN
+OPCIÓN 1: RECUPERACIÓN OPERATIVA (BÁSICA)
+Solo se realizan las reparaciones urgentes para que los equipos enciendan y funcionen. No incluye cambio preventivo de piezas internas mayores.
+
+Costo Operativo Base: USD 714,00
+Kits de Mantenimiento: NO INCLUIDOS
+TOTAL ESTIMADO OPCIÓN 1: USD 714,00
+
+OPCIÓN 2: PUESTA A PUNTO Y EXTENSIÓN DE VIDA ÚTIL (RECOMENDADA)
+Incluye todo lo anterior, más la instalación de los Kits Originales Cimballi. Se dejan las máquinas a nuevo aprovechando la mano de obra de la visita.
+
+Costo Operativo Base: USD 714,00
+Kit E3 (Service Mayor): USD 531,68
+Kit E1 (Mantenimiento Grupo): USD 446,11
+Kit B (Válvulas/Juntas): USD 215,43
+Kit E2 (Mantenimiento Menor): USD 91,12
+TOTAL ESTIMADO OPCIÓN 2: USD 1.998,34

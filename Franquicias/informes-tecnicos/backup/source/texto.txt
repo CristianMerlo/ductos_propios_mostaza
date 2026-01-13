@@ -1,0 +1,58 @@
+INFORME TÉCNICO DE SERVICIO - CALLAO Y CORRIENTES
+
+1. DATOS GENERALES (Comunes a ambos equipos):
+
+Local: Mostaza Callao y Corrientes
+Fecha: 17/12/25
+Técnico Responsable: Nicolas Franco
+Tiempo Total de Trabajo: 4 horas (2hs por equipo)
+
+REPORTE 1: CAFETERA CIMBALI (Sector/Lado "Transfer")
+
+Número de Ticket: 104250
+Incidencia Reportada: ER 033 y 034 (Falla de válvula), leche tibia.
+
+1. DETALLE DEL TRABAJO REALIZADO:
+Se procedió a la intervención técnica para solucionar problemas de temperatura en el sistema de leche y errores de válvulas.
+
+* Sistema de Desagüe: Se realizó la desobstrucción del desagüe principal del equipo.
+* Grupo de Café: Limpieza completa del grupo, ejecución de "Puesta a 0" y calibración de molienda.
+* Sistema de Leche: Regulación de la temperatura y consistencia de la leche. Se realizaron pruebas de erogación verificando el peso y flujo con balanza digital (evidenciado en registro fotográfico).
+
+2. REPUESTOS / PIEZAS IDENTIFICADAS:
+Visualización: En las imágenes se observa una válvula desmontada y un tubo plástico blanco que corresponde al "acople improvisado" mencionado.
+
+3. ESTADO FINAL DEL EQUIPO:
+OPERATIVO CON OBSERVACIONES. El equipo dispensa productos, pero requiere cambio de componentes para operar a temperatura óptima.
+
+4. OBSERVACIONES Y RECOMENDACIONES (CRÍTICO):
+Se detectaron fallas estructurales que impiden el correcto funcionamiento térmico:
+* Válvula EM: No completa su apertura, provocando que la leche no alcance la temperatura programada. Requiere cambio.
+* Válvula ESM: El embudo de esta válvula posee un acople improvisado (detectado visualmente). Se debe reemplazar por el repuesto original.
+* Filtro de Leche: Se detectó el faltante de este componente; debe instalarse.
+
+REPORTE 2: CAFETERA CIMBALI (Sector/Lado "Catta")
+
+Número de Ticket: 104251
+Incidencia Reportada: ER 008 (Timeout manipulación grupo), falla bloque mecánico, café aguado.
+
+1. DETALLE DEL TRABAJO REALIZADO:
+Se trabajó sobre fallas mecánicas y de calidad de producto (pastilla desarmada/mojada).
+
+* Sistema de Café: Resolución del Error 008. Se realizó limpieza profunda del grupo, calibración y "Puesta a 0" del sistema de café.
+* Sistema de Leche: Limpieza manual de todo el circuito de leche y calibración de flujo.
+* Ciclo de Lavado: Se ejecutó el ciclo de lavado automático.
+
+2. REPUESTOS UTILIZADOS:
+[No se instalaron repuestos en esta visita, se realizó diagnóstico de piezas a cambiar].
+
+3. ESTADO FINAL DEL EQUIPO:
+OPERATIVO PARCIALMENTE. El equipo quedó operando y se normalizó la consistencia momentáneamente, pero persiste una falla de temperatura vinculada a componentes eléctricos dañados.
+
+4. OBSERVACIONES Y RECOMENDACIONES (URGENTE):
+El diagnóstico revela daños internos que afectan la calidad de la pastilla y la temperatura:
+* Pistón Inferior/Superior: Se reporta daño en el pistón (lo que causa que la pastilla salga mojada). Se recomienda el cambio del Pistón Superior de grupo (según lista de repuestos solicitada).
+* Error 55 (Temperatura): El error persiste y afecta la temperatura final de la bebida. Se diagnosticó falla en la resistencia eléctrica.
+* Acción Requerida: Solicitar y cambiar Resistencia de Grupo y Pistón Superior de Grupo para resolver definitivamente la humedad en la pastilla y la falta de temperatura.
+
+7. REGISTRO FOTOGRÁFICO:
