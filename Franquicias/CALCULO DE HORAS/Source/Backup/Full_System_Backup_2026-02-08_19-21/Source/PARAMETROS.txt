@@ -1,0 +1,7 @@
+Mes a Evaluar: Enero
+
+Instancia de medici—n: Fecha de cierre del ticket (sirve igual si es anterior pero cerro en el mes que estamos evaluando)
+
+Medida: Horas (HS) en numero entero (aplicar redondeo si aplica)
+
+Skills: Todas las presentes en la carpeta skills.

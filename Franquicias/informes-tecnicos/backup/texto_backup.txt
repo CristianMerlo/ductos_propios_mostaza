@@ -1,0 +1,35 @@
+1. DATOS GENERALES:
+
+Local: Gualeguaychú
+Fecha: 13/02/2026
+Número de Ticket: S/D (Solicitud de Garantía)
+Técnico Responsable: Nahuel Loubiere
+
+2. EQUIPO
+
+TOSTADORA DE CONTACTO VERTICAL (Antunes VCT-2000HC)
+- Número de Fabricación (MFG NO.): 9210200
+- Número de Serie (SERIAL NO.): 25021716
+- Período de Uso: < 30 días (Garantía de fábrica vigente)
+
+3. DETALLE DEL TRABAJO REALIZADO
+Se realizó un peritaje técnico sobre la unidad tras recibirse reportes de bloqueos mecánicos constantes. Se diagnosticó una falla crítico-estructural de origen en los componentes de tracción.
+
+HALLAZGOS MECÁNICOS:
+- Defecto en Bandas Siliconadas: La banda trasera presenta una deformación de fábrica que provoca enganches recurrentes durante el ciclo de rotación, alterando el espaciamiento técnico necesario para el tostado.
+- Desprendimiento de Tensores: A consecuencia de la tracción irregular de las bandas, uno de los tensores de cadena se ha desplazado de su posición original, provocando el desarme del sistema de tensión interno y el bloqueo de la cadena de transmisión.
+- Riesgo de Avería Mayor: La obstrucción mecánica genera un sobrecalentamiento por esfuerzo en el motor de transmisión. Existe un riesgo inminente de daño permanente por sobrecarga eléctrica si el equipo continúa energizado.
+
+4. REPUESTOS UTILIZADOS
+- Ninguno (Se requiere la intervención del fabricante para el recambio total de la unidad).
+
+5. ESTADO FINAL DEL EQUIPO
+EQUIPO NO OPERATIVO. La unidad presenta fallas de origen que comprometen la integridad del motor y la seguridad operativa, por lo cual se ha procedido a su retiro de servicio.
+
+6. OBSERVACIONES Y RECOMENDACIONES
+- JUSTIFICACIÓN TÉCNICA: Dado que el equipo posee menos de un mes de uso y presenta defectos de fabricación intrínsecos en el sistema de tracción (bandas y tensores), se recomienda el recambio total de la unidad bajo los términos de la garantía vigente.
+- SEGURIDAD: Es necesario mantener el equipo desconectado de la red eléctrica para prevenir que las resistencias afecten los componentes plásticos debido a la falta de tensión adecuada en las bandas.
+- ACCIÓN REQUERIDA: Se sugiere tramitar de forma prioritaria la reposición del equipo con el proveedor para asegurar la continuidad operativa de la sucursal Gualeguaychú.
+
+7. REGISTRO FOTOGRÁFICO
+(Se incluyen 2 imágenes técnicas documentando el estado de los tensores desplazados y el código de serie del equipo para el trámite de garantía).

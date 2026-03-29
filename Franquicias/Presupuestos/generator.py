@@ -161,50 +161,104 @@ def convert_image_to_base64(image_path):
 
 
 def format_text_content(text):
-    """Formatea el texto en párrafos y títulos HTML"""
-    # Separar por párrafos
-    paragraphs = text.split('\n\n')
-    
-    def title_case(text):
-        if not text or not text.strip(): return text
-        words = text.strip().split()
-        lowercase_words = {'y', 'de', 'del', 'la', 'el', 'los', 'las', 'a', 'en', 'con', 'por'}
-        result = []
-        for i, word in enumerate(words):
-            if i == 0 or word.lower() not in lowercase_words:
-                result.append(word.capitalize())
-            else:
-                result.append(word.lower())
-        return ' '.join(result)
-    
+    """
+    Formatea el contenido del presupuesto en secciones estructuradas (cards),
+    tablas y listas con iconos.
+    """
+    sections = re.split(r'\n(?=[IVX]+\.\s)', text)
     formatted_html = ''
-    for para in paragraphs:
-        trimmed = para.strip()
-        if not trimmed: continue
-        
-        # Detectar títulos (por numeración o mayúsculas)
-        if re.match(r'^\d+\.', trimmed) or (trimmed.isupper() and len(trimmed) < 60):
-            content = title_case(trimmed) if trimmed.isupper() else trimmed
-            formatted_html += f'<h3>{content}</h3>\n'
-            continue
 
-        # Procesar líneas internas del párrafo
-        processed_para = trimmed.replace('\n', '<br>')
-        processed_para = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', processed_para)
+    def clean_header(line):
+        return re.sub(r'^[IVX]+\.\s*', '', line).strip()
+
+    for section in sections:
+        lines = [l.strip() for l in section.strip().split('\n') if l.strip()]
+        if not lines: continue
+
+        header_raw = lines[0]
+        header_text = clean_header(header_raw)
+        content_lines = lines[1:]
+
+        # Determinar el tipo de sección
+        if "DATOS GENERALES" in header_raw.upper():
+            formatted_html += f'<section class="section-card"><h2>I. {header_text}</h2>'
+            formatted_html += '<div class="info-grid">'
+            for line in content_lines:
+                if ':' in line:
+                    label, value = map(str.strip, line.split(':', 1))
+                    formatted_html += f'<div class="info-item"><span class="info-label">{label}</span><span class="info-value">{value}</span></div>'
+            formatted_html += '</div></section>'
+
+        elif "ALCANCE" in header_raw.upper():
+            formatted_html += f'<section class="section-card"><h2>II. {header_text}</h2>'
+            # Buscar el párrafo descriptivo y la lista de sucursales
+            desc_lines = []
+            sucursales = []
+            for line in content_lines:
+                if line.startswith('Mostaza') or line.startswith('📍') or (not any(c.islower() for c in line) and len(line) > 5):
+                     # Probable sucursal: Limpiar iconos si ya los tiene
+                    clean_name = line.replace('📍', '').strip()
+                    sucursales.append(clean_name)
+                else:
+                    desc_lines.append(line)
+            
+            if desc_lines:
+                formatted_html += f'<div class="scope-content"><p>{" ".join(desc_lines)}</p></div>'
+            
+            if sucursales:
+                formatted_html += '<ul class="sucursales-list">'
+                for suc in sucursales:
+                    formatted_html += f'<li class="sucursal-item"><span>📍</span> {suc}</li>'
+                formatted_html += '</ul>'
+            formatted_html += '</section>'
+
+        elif "DESGLOSE" in header_raw.upper() or "INVERSIÓN" in header_raw.upper():
+            formatted_html += f'<section class="section-card"><h2>III. {header_text}</h2>'
+            formatted_html += '<div class="table-container"><table>'
+            
+            # Procesar tabla
+            rows_found = 0
+            for line in content_lines:
+                # Detectar fila de encabezado (ítem, Concepto, etc)
+                if rows_found == 0 and ("ítem" in line.lower() or "item" in line.lower()):
+                    cols = re.split(r'\t|\s{2,}', line.strip())
+                    formatted_html += '<thead><tr>' + ''.join(f'<th>{c}</th>' for c in cols) + '</tr></thead><tbody>'
+                    rows_found += 1
+                    continue
+                
+                # Detectar fila de TOTAL
+                if "TOTAL" in line.upper():
+                    cols = re.split(r'\t|\s{2,}', line.strip())
+                    # Asegurar que tenga 3 o 4 columnas para que no se rompa el layout
+                    formatted_html += '<tr class="total-row">' + ''.join(f'<td>{c}</td>' for c in cols) + '</tr>'
+                    continue
+
+                # Filas normales
+                cols = re.split(r'\t|\s{2,}', line.strip())
+                if len(cols) > 1:
+                    formatted_html += '<tr>' + ''.join(f'<td>{c}</td>' for c in cols) + '</tr>'
+                    rows_found += 1
+
+            formatted_html += '</tbody></table></div></section>'
+
+        elif "CONSIDERACIONES" in header_raw.upper() or "TÉCNICAS" in header_raw.upper():
+            formatted_html += f'<section class="section-card"><h2>IV. {header_text}</h2>'
+            formatted_html += '<div class="terms-grid">'
+            for line in content_lines:
+                if ':' in line:
+                    badge, text = map(str.strip, line.split(':', 1))
+                    formatted_html += f'<div class="term-item"><span class="term-badge">{badge}</span><p>{text}</p></div>'
+                else:
+                    formatted_html += f'<div class="term-item"><p>{line}</p></div>'
+            formatted_html += '</div></section>'
         
-        new_lines = []
-        for line in processed_para.split('<br>'):
-            if ':' in line and not ('<' in line.split(':')[0]):
-                parts = line.split(':', 1)
-                label = parts[0].strip()
-                value = parts[1].strip()
-                new_lines.append(f'<span class="data-label">{label}:</span> {value}')
-            else:
-                new_lines.append(line)
-        
-        processed_para = '<br>'.join(new_lines)
-        formatted_html += f'<p>{processed_para}</p>\n'
-    
+        else:
+            # Fallback para secciones no identificadas
+            formatted_html += f'<section class="section-card"><h2>{header_text}</h2>'
+            for line in content_lines:
+                formatted_html += f'<p>{line}</p>'
+            formatted_html += '</section>'
+
     return formatted_html
 
 def generate_budget():
@@ -228,16 +282,21 @@ def generate_budget():
         logo_base64 = ''
         logo_display = 'none'
 
-    report_title = "Presupuesto de Obra / Servicio"
+    report_title = "Presupuesto de Servicio"
     
     # Extraer fecha
     date_match = re.search(r'Fecha:\s*(.*)', text_content)
     if date_match:
         report_date = date_match.group(1).strip()
     else:
-        report_date = datetime.now().strftime('%d de %B, %Y')
-        months_es = {'January': 'Enero', 'February': 'Febrero', 'March': 'Marzo', 'April': 'Abril', 'May': 'Mayo', 'June': 'Junio', 'July': 'Julio', 'August': 'Agosto', 'September': 'Septiembre', 'October': 'Octubre', 'November': 'Noviembre', 'December': 'Diciembre'}
-        for en, es in months_es.items(): report_date = report_date.replace(en, es)
+        # Intentar extraer del primer bloque de datos
+        dt_match = re.search(r'\d{1,2}\s+de\s+[a-zA-Z]+,\s+\d{4}', text_content)
+        if dt_match:
+            report_date = dt_match.group(0)
+        else:
+            report_date = datetime.now().strftime('%d de %B, %Y')
+            months_es = {'January': 'Enero', 'February': 'Febrero', 'March': 'Marzo', 'April': 'Abril', 'May': 'Mayo', 'June': 'Junio', 'July': 'Julio', 'August': 'Agosto', 'September': 'Septiembre', 'October': 'Octubre', 'November': 'Noviembre', 'December': 'Diciembre'}
+            for en, es in months_es.items(): report_date = report_date.replace(en, es)
     
     # Reemplazos
     template = template.replace('{{REPORT_TITLE}}', report_title)

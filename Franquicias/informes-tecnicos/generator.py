@@ -21,6 +21,21 @@ TEMPLATE_FILE = BASE_DIR / 'template.html'
 OUTPUT_FILE = BASE_DIR / 'informe_final.html'
 PROMPT_FILE = BASE_DIR / 'PROMPTS TECNICOS' / 'prompt tecnico.txt'
 
+def load_env():
+    """Carga variables de entorno desde el archivo .env en la raíz del repositorio"""
+    repo_root = BASE_DIR.parent.parent
+    env_file = repo_root / '.env'
+    if env_file.exists():
+        with open(env_file, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#'):
+                    key, value = line.split('=', 1)
+                    os.environ[key.strip()] = value.strip()
+
+# Cargar variables de entorno al iniciar
+load_env()
+
 def natural_sort_key(s):
     """Clave para ordenamiento natural (ej: 1, 2, 10 en vez de 1, 10, 2)"""
     return [int(text) if text.isdigit() else text.lower()
@@ -84,35 +99,34 @@ def read_prompt():
             return PROMPT_FILE.read_text(encoding='utf-8')
         except Exception as e:
             print(f"⚠️  No se pudo leer el prompt técnico: {e}")
+    else:
+        print(f"⚠️  No se encontró el archivo de prompt en: {PROMPT_FILE}")
     return None
 
 def enhance_text_with_llm(raw_text, prompt_instruction):
     """
-    Intenta mejorar el texto usando una API de LLM (ej: OpenAI).
-    Requiere variable de entorno OPENAI_API_KEY.
+    Intenta mejorar el texto usando LLaMA 3 a través de Groq.
     """
-    api_key = os.environ.get('OPENAI_API_KEY')
+    api_key = os.environ.get('GROQ_API_KEY')
     
     if not api_key:
-        print("ℹ️  Nota: No se detectó OPENAI_API_KEY. Usando texto original (sin mejora IA).")
+        print("ℹ️  Nota: No se detectó GROQ_API_KEY en el archivo .env. Usando texto original (sin mejora IA).")
         return raw_text
 
-    print("🤖 Procesando texto con LLM...")
+    print("🤖 Procesando texto con LLM (LLaMA 3 vía Groq)...")
     
-    url = "https://api.openai.com/v1/chat/completions"
+    url = "https://api.groq.com/openai/v1/chat/completions"
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Bearer {api_key}"
+        "Authorization": f"Bearer {api_key}",
+        "User-Agent": "ReportGenerator/1.0"
     }
     
-    # Combinar prompt con el texto del usuario
-    full_user_content = f"{prompt_instruction}\n\nInformación a procesar:\n{raw_text}"
-    
     data = {
-        "model": "gpt-4o", # O el modelo que prefieras
+        "model": "llama-3.3-70b-versatile",
         "messages": [
-            {"role": "system", "content": "Eres un asistente experto en redacción de informes técnicos."},
-            {"role": "user", "content": full_user_content}
+            {"role": "system", "content": prompt_instruction},
+            {"role": "user", "content": f"Por favor, estructura y procesa la siguiente información:\n\n{raw_text}"}
         ],
         "temperature": 0.3
     }
@@ -122,10 +136,14 @@ def enhance_text_with_llm(raw_text, prompt_instruction):
         with urllib.request.urlopen(req) as response:
             result = json.loads(response.read().decode('utf-8'))
             enhanced_text = result['choices'][0]['message']['content']
-            print("✓ Texto mejorado con IA exitosamente")
+            print("✓ Texto formateado con IA exitosamente")
             return enhanced_text
+    except urllib.error.HTTPError as e:
+        error_info = e.read().decode('utf-8')
+        print(f"⚠️  Error HTTP al consultar API de IA ({e.code}): {error_info}")
+        return raw_text
     except Exception as e:
-        print(f"⚠️  Error al consultar API de IA: {e}")
+        print(f"⚠️  Error de conexión al consultar API de IA: {e}")
         return raw_text
 
 def read_text_content(text_files):
@@ -216,6 +234,16 @@ def format_text_content(text):
         if not trimmed:
             continue
             
+        # Filtro de seguridad avanzado: Eliminar frases típicas de chatbots
+        lower_trimmed = trimmed.lower()
+        forbidden_phrases = [
+            'aquí tienes', 'he redactado', 'adjunto informe', 'espero que sea de su agrado',
+            '¿desea procesar otro?', '¿necesitas algo más?', 'qué tal', 'hola', 'saludos',
+            'claro que sí', 'por supuesto', 'listo, aquí está'
+        ]
+        if any(trigger in lower_trimmed for trigger in forbidden_phrases):
+            if len(trimmed) < 300: # Si es un bloque corto con estas frases, se descarta
+                continue
         trimmed = trimmed.replace('(Ver imágenes adjuntas a continuación)', '')
         
         # 1. Títulos de Sección (H3) - Ej: 1. Datos Generales
@@ -237,6 +265,47 @@ def format_text_content(text):
             # Si había más líneas en este "párrafo", las procesamos como texto normal
             if len(lines) > 1:
                 content_lines = '\n'.join(lines[1:]).strip()
+
+                # REGLA: Forzar iconos de estado en la sección de ESTADO FINAL
+                if 'ESTADO FINAL' in title_line.upper():
+                    status_text = content_lines.upper()
+                    icon = ""
+                    state = ""
+                    
+                    if 'INOPERATIV' in status_text:
+                        icon = "🔴"
+                        state = "INOPERATIVA"
+                    elif 'CON OBSERVACIONES' in status_text:
+                        icon = "🟡"
+                        state = "OPERATIVA CON OBSERVACIONES"
+                    elif 'OPERATIV' in status_text:
+                        icon = "🟢"
+                        state = "OPERATIVA"
+                    
+                    if icon and state:
+                        # Buscamos si ya tiene el prefijo para no duplicar
+                        if "ESTADO FINAL:" not in content_lines.upper():
+                            # Intentamos limpiar la descripción original si contenía la palabra clave
+                            # para que no quede redundante (ej: "Estado Final: 🔴 INOPERATIVA. INOPERATIVA...")
+                            clean_content = content_lines
+                            if state in clean_content.upper():
+                                # Eliminar la primera oración si es solo el estado
+                                parts = clean_content.split('.', 1)
+                                if len(parts) > 1 and state in parts[0].upper() and len(parts[0]) < 20:
+                                    clean_content = parts[1].strip()
+                                elif state in parts[0].upper() and len(parts[0]) < 20:
+                                    clean_content = ""
+                            
+                            content_lines = f"Estado Final: {icon} {state}"
+                            if clean_content:
+                                if not clean_content.startswith('.') and clean_content:
+                                    content_lines += ". "
+                                content_lines += clean_content
+
+                # REGLA: No mostrar contenido en la Sección 7 (se llena sola con la galería)
+                if 'REGISTRO FOTOGRÁFICO' in title_line.upper():
+                    content_lines = ""
+
                 if content_lines:
                     # Procesar como párrafo normal (puntos 3 abajo)
                     formatted_html += f'<p>{content_lines}</p>\n'
@@ -254,6 +323,12 @@ def format_text_content(text):
         # Convertir **texto** a <b>texto</b> (permitir negrita manual si el usuario la pone)
         processed_para = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', processed_para)
         
+        # REGLA: Eliminar aclaraciones redundantes tipo "1 (Un)" o "Un (1)"
+        # Caso 1: Numero (Texto) -> Numero
+        processed_para = re.sub(r'(\d+)\s*\([^)]*[a-zA-ZñÑ]{2,}[^)]*\)', r'\1', processed_para)
+        # Caso 2: Texto (Numero) -> Texto
+        processed_para = re.sub(r'([a-zA-ZñÑ]{2,})\s*\(\s*\d+\s*\)', r'\1', processed_para)
+        
         # Manejo de etiquetas tipo "Local: ..." en párrafos
         # El usuario pidió que el resto NO vaya en negrita, pero mantendremos las etiquetas 
         # con una clase CSS para que se vean ordenadas, y el CSS decidirá la negrita.
@@ -267,6 +342,54 @@ def format_text_content(text):
                 # Aplicar Title Case a nombres propios en ciertos campos
                 if any(k in label for k in ['Local', 'Técnico', 'Responsable']):
                     value = title_case(value)
+                
+                # REGLA: Tiempo de Labor (Búsqueda más flexible y REDONDEO SIEMPRE HACIA ARRIBA)
+                labor_keywords = [
+                    'Tiempo de Labor', 'Tiempo de Trabajo', 'Tiempo de Servicio', 
+                    'Horario de Servicio', 'Hora de Servicio', 'Horas de Trabajo', 'Labor'
+                ]
+                if any(k.lower() in label.lower() for k in labor_keywords):
+                    value = value.strip()
+                    print(f"DEBUG: Procesando tiempo: '{value}'")
+                    
+                    # Intentar extraer horas y minutos
+                    # Formatos: "2:30", "2 hs 30", "2.5 hs", "2,5 hs"
+                    hours = 0
+                    minutes = 0
+                    
+                    # Caso 1: HH:MM o H:MM
+                    time_match = re.search(r'(\d+):(\d+)', value)
+                    if time_match:
+                        hours = int(time_match.group(1))
+                        minutes = int(time_match.group(2))
+                    else:
+                        # Caso 2: X hs Y mins o similar
+                        h_match = re.search(r'(\d+)\s*(?:hs?|horas?)', value, re.I)
+                        m_match = re.search(r'(\d+)\s*(?:min?|minutos?)', value, re.I)
+                        if h_match: hours = int(h_match.group(1))
+                        if m_match: minutes = int(m_match.group(1))
+                        
+                        # Caso 3: Decimal (2.5 o 2,5)
+                        if not h_match and not m_match:
+                            dec_match = re.search(r'(\d+)[.,](\d+)', value)
+                            if dec_match:
+                                hours = int(dec_match.group(1))
+                                minutes = 1 # Forzar redondeo si hay decimales
+
+                    # Lógica de Redondeo hacia arriba
+                    if minutes > 0:
+                        final_hours = hours + 1
+                        print(f"⚠️  Redondeo: {hours}h {minutes}m -> {final_hours}hs (siempre hacia arriba)")
+                    else:
+                        final_hours = hours
+                    
+                    # Aplicar mínimo de 2 horas
+                    if final_hours < 2:
+                        final_hours = 2
+                        print(f"⚠️  Regla de negocio: Tiempo mínimo aplicado (2hs)")
+                    
+                    if 'jornada' not in value.lower():
+                        value = f"{final_hours:02d}:00 hs."
                 
                 new_lines.append(f'<span class="data-label">{label}:</span> {value}')
             else:
@@ -335,7 +458,15 @@ def generate_report():
     
     print(f'\n✅ ¡Informe generado exitosamente!')
     print(f'📄 Archivo: {OUTPUT_FILE}')
-    print(f'\n💡 Abre el archivo en tu navegador para visualizarlo.\n')
+    
+    # Abrir en el navegador automáticamente
+    try:
+        import webbrowser
+        file_url = f"file://{OUTPUT_FILE.resolve()}"
+        webbrowser.open(file_url)
+        print("🌐 Abriendo informe en el navegador por defecto...")
+    except Exception as e:
+        print(f"⚠️ No se pudo abrir el navegador automáticamente: {e}")
 
 if __name__ == '__main__':
     generate_report()

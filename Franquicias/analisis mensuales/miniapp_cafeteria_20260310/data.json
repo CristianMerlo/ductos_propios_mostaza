@@ -1,0 +1,1545 @@
+{
+    "summary": {
+        "total_cases": 199,
+        "cafeteria_cases": 167,
+        "total_hs": 2600.0,
+        "total_usd": 65000.0,
+        "cafeteria_percent": 83.9
+    },
+    "top_incidencias": {
+        "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas": 53,
+        "Equipo salta el disyuntor o t\u00e9rmica": 23,
+        "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error": 17,
+        "Otras fallas, indicar n\u00famero de falla": 13,
+        "ER 062 a 065 - Calibrar equipo, filtros obstruidos o falla sensor, seg\u00fan error": 8,
+        "ER 066 y 067 - Falta de agua ": 7,
+        "Pieza perdida o rota": 6,
+        "ER 008 - Timeout manipulaci\u00f3n grupo, falla en bloque mecanico": 6,
+        "ER 003 - C\u00e1mara fuera de posici\u00f3n, maquina bloqueada": 4,
+        "ER 051 a 054 - Falla en sensor, revisar seg\u00fan error": 4
+    },
+    "top_sucursales_hours": {
+        "Liniers": 30.0,
+        "San Fernando": 27.0,
+        "Palmas del Pilar": 23.0,
+        "Boedo": 22.0,
+        "Quilmes Peatonal": 21.0,
+        "Cabildo": 20.0,
+        "Moreno": 18.0,
+        "Merlo": 13.0,
+        "Lanus 2": 13.0,
+        "Avellaneda": 13.0
+    },
+    "usd_by_cat": {
+        "": 52900.0,
+        "EQUIPOS;CAFETERAS CIMBALI": 10325.0,
+        ";OTROS": 900.0,
+        "EQUIPOS;CAFETERAS MELITA": 525.0,
+        "EQUIPOS;MAQUINA DE HIELO": 350.0
+    },
+    "records": [
+        {
+            "C\u00f3digo": 107125,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Avellaneda",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107225,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Avellaneda",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109263,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Avellaneda",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 110062,
+            "Incidencia": "ER 003 - C\u00e1mara fuera de posici\u00f3n, maquina bloqueada",
+            "Sucursal": "Avellaneda",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Resuelto"
+        },
+        {
+            "C\u00f3digo": 109601,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Avellaneda",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105519,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Berazategui",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107262,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Berazategui",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107767,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Berazategui",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107932,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Berazategui",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108218,
+            "Incidencia": "ER 062 a 065 - Calibrar equipo, filtros obstruidos o falla sensor, seg\u00fan error",
+            "Sucursal": "Berazategui",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108693,
+            "Incidencia": "ER 025 a 032 - Cableado defectuoso, revisar seg\u00fan error",
+            "Sucursal": "Berazategui",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108584,
+            "Incidencia": "ER 041 - Sobrecalentamiento de motor de bomba de leche",
+            "Sucursal": "Berazategui",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105889,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Boedo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106295,
+            "Incidencia": "ER 056 - Falla en sensor de temperatura",
+            "Sucursal": "Boedo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 5.0,
+            "USD": 125.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106696,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Boedo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 2.0,
+            "USD": 50.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107046,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Boedo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107160,
+            "Incidencia": "Otras fallas, indicar n\u00famero de falla",
+            "Sucursal": "Boedo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108080,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Boedo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108469,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Boedo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108874,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Boedo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109284,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Boedo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105963,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Cabildo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106477,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Cabildo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107102,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Cabildo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107181,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Cabildo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107182,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Cabildo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108097,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Cabildo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108689,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Cabildo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109118,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Cabildo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109557,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Cabildo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 2.0,
+            "USD": 50.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107138,
+            "Incidencia": "ER 003 - C\u00e1mara fuera de posici\u00f3n, maquina bloqueada",
+            "Sucursal": "Cabildo 2",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 2.0,
+            "USD": 50.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107222,
+            "Incidencia": "ER 066 y 067 - Falta de agua ",
+            "Sucursal": "Cabildo 2",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 2.0,
+            "USD": 50.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108213,
+            "Incidencia": "ER 037 y 038 - Falla en sensor, revisar seg\u00fan error",
+            "Sucursal": "Cabildo 2",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 2.0,
+            "USD": 50.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108489,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Cabildo 2",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105394,
+            "Incidencia": "ER 003 - C\u00e1mara fuera de posici\u00f3n, maquina bloqueada",
+            "Sucursal": "Canning",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 2.0,
+            "USD": 50.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106692,
+            "Incidencia": "ER 008 - Timeout manipulaci\u00f3n grupo, falla en bloque mecanico",
+            "Sucursal": "Canning",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107284,
+            "Incidencia": "ER 008 - Timeout manipulaci\u00f3n grupo, falla en bloque mecanico",
+            "Sucursal": "Canning",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105802,
+            "Incidencia": "Otras fallas, indicar n\u00famero de falla",
+            "Sucursal": "Carlos Paz",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105803,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Carlos Paz",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 5.0,
+            "USD": 125.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108445,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Carlos Paz",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 5.0,
+            "USD": 125.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106674,
+            "Incidencia": "Otras fallas, indicar n\u00famero de falla",
+            "Sucursal": "Carr Quilmes",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107879,
+            "Incidencia": "ER 058 - Falla en sonda de nivel",
+            "Sucursal": "Carr Quilmes",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105410,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Constituci\u00f3n",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106115,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Constituci\u00f3n",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109036,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Constituci\u00f3n",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107696,
+            "Incidencia": "ER 059 a 061 - Problemas con el suministro de agua del equipo",
+            "Sucursal": "Flores",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106000,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Francisco  Alvarez",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108850,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Gonnet",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109875,
+            "Incidencia": "ER 058 - Falla en sonda de nivel",
+            "Sucursal": "Grand Bourg",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 6.0,
+            "USD": 150.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106027,
+            "Incidencia": "ER 008 - Timeout manipulaci\u00f3n grupo, falla en bloque mecanico",
+            "Sucursal": "Guemes",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107782,
+            "Incidencia": "ER 008 - Timeout manipulaci\u00f3n grupo, falla en bloque mecanico",
+            "Sucursal": "Guemes",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108177,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Guemes",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109416,
+            "Incidencia": "ER 008 - Timeout manipulaci\u00f3n grupo, falla en bloque mecanico",
+            "Sucursal": "Guemes",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109331,
+            "Incidencia": "ER 037 y 038 - Falla en sensor, revisar seg\u00fan error",
+            "Sucursal": "Guemes",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107325,
+            "Incidencia": "ER 008 - Timeout manipulaci\u00f3n grupo, falla en bloque mecanico",
+            "Sucursal": "Jose C paz",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107404,
+            "Incidencia": "Pieza perdida o rota",
+            "Sucursal": "Jose C paz",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109744,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Jose C paz",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105479,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Junin Auto",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106568,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "La Plata 2",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106753,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "La Plata 2",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 5.0,
+            "USD": 125.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109155,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "La Plata 4",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 6.0,
+            "USD": 150.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105249,
+            "Incidencia": "ER 066 y 067 - Falta de agua ",
+            "Sucursal": "Lanus 2",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107685,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Lanus 2",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108325,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Lanus 2",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109377,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Lanus 2",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109580,
+            "Incidencia": "Otras fallas, indicar n\u00famero de falla",
+            "Sucursal": "Lanus 2",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105657,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Liniers",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106799,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Liniers",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106534,
+            "Incidencia": "ER 055 - Elemento calentador averiado",
+            "Sucursal": "Liniers",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 5.0,
+            "USD": 125.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106680,
+            "Incidencia": "ER 062 a 065 - Calibrar equipo, filtros obstruidos o falla sensor, seg\u00fan error",
+            "Sucursal": "Liniers",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106705,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Liniers",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105887,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Liniers",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106950,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Liniers",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 5.0,
+            "USD": 125.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107784,
+            "Incidencia": "Otras fallas, indicar n\u00famero de falla",
+            "Sucursal": "Liniers",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109797,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Liniers",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109895,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Liniers",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109995,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Liniers",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Resuelto"
+        },
+        {
+            "C\u00f3digo": 110081,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Liniers",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Resuelto"
+        },
+        {
+            "C\u00f3digo": 108363,
+            "Incidencia": "ER 051 a 054 - Falla en sensor, revisar seg\u00fan error",
+            "Sucursal": "Lomas",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106073,
+            "Incidencia": "Otras fallas, indicar n\u00famero de falla",
+            "Sucursal": "Lujan",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 6.0,
+            "USD": 150.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107119,
+            "Incidencia": "ER 062 a 065 - Calibrar equipo, filtros obstruidos o falla sensor, seg\u00fan error",
+            "Sucursal": "Lujan",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 5.0,
+            "USD": 125.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106355,
+            "Incidencia": "ER 051 a 054 - Falla en sensor, revisar seg\u00fan error",
+            "Sucursal": "Merlo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 5.0,
+            "USD": 125.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107442,
+            "Incidencia": "ER 062 a 065 - Calibrar equipo, filtros obstruidos o falla sensor, seg\u00fan error",
+            "Sucursal": "Merlo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108414,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Merlo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106752,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Monte Grande",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 2.0,
+            "USD": 50.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106928,
+            "Incidencia": "ER 056 - Falla en sensor de temperatura",
+            "Sucursal": "Monte Grande",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 110003,
+            "Incidencia": "ER 059 a 061 - Problemas con el suministro de agua del equipo",
+            "Sucursal": "Monte Grande",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Resuelto"
+        },
+        {
+            "C\u00f3digo": 105896,
+            "Incidencia": "ER 056 - Falla en sensor de temperatura",
+            "Sucursal": "Moreno",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106588,
+            "Incidencia": "ER 066 y 067 - Falta de agua ",
+            "Sucursal": "Moreno",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107343,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Moreno",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 5.0,
+            "USD": 125.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107699,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Moreno",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107804,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Moreno",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108455,
+            "Incidencia": "ER 066 y 067 - Falta de agua ",
+            "Sucursal": "Moreno",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106675,
+            "Incidencia": "Falla de temperatura del equipo",
+            "Sucursal": "Once",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS MELITA",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106735,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Once",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS MELITA",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 110116,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Once",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Resuelto"
+        },
+        {
+            "C\u00f3digo": 105235,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Palmas del Pilar",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105400,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Palmas del Pilar",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105399,
+            "Incidencia": "ER 051 a 054 - Falla en sensor, revisar seg\u00fan error",
+            "Sucursal": "Palmas del Pilar",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 8.0,
+            "USD": 200.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105898,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Palmas del Pilar",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 5.0,
+            "USD": 125.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106965,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Palmas del Pilar",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 5.0,
+            "USD": 125.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107303,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Palmas del Pilar",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 5.0,
+            "USD": 125.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106171,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Parque Chacabuco",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106241,
+            "Incidencia": "ER 055 - Elemento calentador averiado",
+            "Sucursal": "Parque Chacabuco",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 2.0,
+            "USD": 50.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109527,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Parque Chacabuco",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109994,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Parque Chacabuco",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Resuelto"
+        },
+        {
+            "C\u00f3digo": 110076,
+            "Incidencia": "ER 003 - C\u00e1mara fuera de posici\u00f3n, maquina bloqueada",
+            "Sucursal": "Parque Chacabuco",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Resuelto"
+        },
+        {
+            "C\u00f3digo": 106678,
+            "Incidencia": "Otras fallas, indicar n\u00famero de falla",
+            "Sucursal": "Pompeya",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106866,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Pompeya",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106865,
+            "Incidencia": "Mantenimiento para filtros",
+            "Sucursal": "Pompeya",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105236,
+            "Incidencia": "Otras fallas, indicar n\u00famero de falla",
+            "Sucursal": "Portal Rosario",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106597,
+            "Incidencia": "Pieza perdida o rota",
+            "Sucursal": "Portal Rosario",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 5.0,
+            "USD": 125.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107341,
+            "Incidencia": "Otras fallas, indicar n\u00famero de falla",
+            "Sucursal": "Portal Rosario",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108330,
+            "Incidencia": "Otras fallas, indicar n\u00famero de falla",
+            "Sucursal": "Portal Rosario",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108111,
+            "Incidencia": "Pieza perdida o rota",
+            "Sucursal": "Portal Rosario",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109022,
+            "Incidencia": "Otras fallas, indicar n\u00famero de falla",
+            "Sucursal": "Portal Rosario",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105811,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Quilmes Peatonal",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105888,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Quilmes Peatonal",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106399,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Quilmes Peatonal",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 5.0,
+            "USD": 125.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106962,
+            "Incidencia": "ER 062 a 065 - Calibrar equipo, filtros obstruidos o falla sensor, seg\u00fan error",
+            "Sucursal": "Quilmes Peatonal",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108087,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Quilmes Peatonal",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108959,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Quilmes Peatonal",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109335,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Quilmes Peatonal",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105376,
+            "Incidencia": "ER 058 - Falla en sonda de nivel",
+            "Sucursal": "ROSARIO PUMA",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 8.0,
+            "USD": 200.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109551,
+            "Incidencia": "ER 050 - Baja presi\u00f3n de agua",
+            "Sucursal": "ROSARIO PUMA",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107280,
+            "Incidencia": "Falla electrica del equipo, equipo inoperativo",
+            "Sucursal": "Ramos",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS MELITA",
+            "HS_Final": 2.0,
+            "USD": 50.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109061,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Ramos",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 2.0,
+            "USD": 50.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109062,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Ramos",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109207,
+            "Incidencia": "Falla en molido de caf\u00e9, irregular",
+            "Sucursal": "Ramos",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS MELITA",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 110126,
+            "Incidencia": "Falla en molido de caf\u00e9, irregular",
+            "Sucursal": "Ramos",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS MELITA",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Resuelto"
+        },
+        {
+            "C\u00f3digo": 105851,
+            "Incidencia": "Pieza perdida o rota",
+            "Sucursal": "Rosario Oro\u00f1o",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108479,
+            "Incidencia": "ER 051 a 054 - Falla en sensor, revisar seg\u00fan error",
+            "Sucursal": "Rosario Oro\u00f1o",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105849,
+            "Incidencia": "Pieza perdida o rota",
+            "Sucursal": "Rosario Pellegrini",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108751,
+            "Incidencia": "Otras fallas, indicar n\u00famero de falla",
+            "Sucursal": "Rosario Pellegrini",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107321,
+            "Incidencia": "ER 025 a 032 - Cableado defectuoso, revisar seg\u00fan error",
+            "Sucursal": "Rotonda Gutierrez",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106959,
+            "Incidencia": "Pieza perdida o rota",
+            "Sucursal": "Salta Libertad",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108543,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Salta Oran",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105683,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "San Fernando",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 5.0,
+            "USD": 125.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106334,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "San Fernando",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106970,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "San Fernando",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 6.0,
+            "USD": 150.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108259,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "San Fernando",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108925,
+            "Incidencia": "ER 037 y 038 - Falla en sensor, revisar seg\u00fan error",
+            "Sucursal": "San Fernando",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109953,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "San Fernando",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Resuelto"
+        },
+        {
+            "C\u00f3digo": 110124,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "San Fernando",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Resuelto"
+        },
+        {
+            "C\u00f3digo": 105989,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "San Isidro",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS MELITA",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106054,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "San Isidro",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS MELITA",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106949,
+            "Incidencia": "Falla en molido de caf\u00e9, equipo inoperativo",
+            "Sucursal": "San Isidro",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS MELITA",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106207,
+            "Incidencia": "Otras fallas, indicar n\u00famero de falla",
+            "Sucursal": "San Justo 3",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108338,
+            "Incidencia": "ER 062 a 065 - Calibrar equipo, filtros obstruidos o falla sensor, seg\u00fan error",
+            "Sucursal": "San Justo 3",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108339,
+            "Incidencia": "ER 062 a 065 - Calibrar equipo, filtros obstruidos o falla sensor, seg\u00fan error",
+            "Sucursal": "San Justo 3",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108340,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "San Justo 3",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106681,
+            "Incidencia": "ER 066 y 067 - Falta de agua ",
+            "Sucursal": "San Martin Auto",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106685,
+            "Incidencia": "ER 066 y 067 - Falta de agua ",
+            "Sucursal": "San Martin Auto",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 2.0,
+            "USD": 50.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106690,
+            "Incidencia": "ER 066 y 067 - Falta de agua ",
+            "Sucursal": "San Martin Auto",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 6.0,
+            "USD": 150.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107335,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "San Mart\u00edn peatonal",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107151,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "San Miguel 3",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108786,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "San Miguel Auto",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108201,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "San Telmo",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106926,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Urquiza",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 108329,
+            "Incidencia": "ER 033 y 034 - Falla de v\u00e1lvula, revisar seg\u00fan error",
+            "Sucursal": "Urquiza",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 105863,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Villa del Parque",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 3.0,
+            "USD": 75.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 106041,
+            "Incidencia": "Equipo salta el disyuntor o t\u00e9rmica",
+            "Sucursal": "Villa del Parque",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 107109,
+            "Incidencia": "ER 021  y 022 - Anomal\u00eda en movimiento de las muelas",
+            "Sucursal": "Wilde",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 109811,
+            "Incidencia": "ER 062 a 065 - Calibrar equipo, filtros obstruidos o falla sensor, seg\u00fan error",
+            "Sucursal": "Wilde",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS CIMBALI",
+            "HS_Final": 4.0,
+            "USD": 100.0,
+            "Estado": "Resuelto"
+        },
+        {
+            "C\u00f3digo": 94194,
+            "Incidencia": "Falla electrica del equipo, equipo inoperativo",
+            "Sucursal": "Z\u00e1rate",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS MELITA",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 97055,
+            "Incidencia": "Falla de temperatura del equipo",
+            "Sucursal": "Z\u00e1rate",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS MELITA",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        },
+        {
+            "C\u00f3digo": 103892,
+            "Incidencia": "Falla en molido de caf\u00e9, equipo inoperativo",
+            "Sucursal": "Z\u00e1rate",
+            "Categor\u00eda": "EQUIPOS;CAFETERAS MELITA",
+            "HS_Final": 0.0,
+            "USD": 0.0,
+            "Estado": "Cerrado"
+        }
+    ]
+}

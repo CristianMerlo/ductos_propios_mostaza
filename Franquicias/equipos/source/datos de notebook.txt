@@ -1,0 +1,131 @@
+Equipos Marca La Cimbali (20 confirmados)
+Berazategui: 2037123
+.
+Boedo: 1860967
+.
+Cabildo (Equipo 1): 1840650
+.
+Cabildo 2: 2032629
+.
+Canning: 203305
+.
+Ezeiza: 1980865
+.
+Francisco Alvarez: 1969718
+.
+Güemes (Equipo 1): 1977235
+.
+La Plata 2: 1851680
+.
+La Plata 3: 2095737
+.
+Liniers: 1842009
+.
+Moreno (Equipo 1): 2033458
+.
+Moreno (Equipo 2): 1838967
+.
+Quilmes Peatonal (Equipo 1): 1855442
+.
+Quilmes Peatonal (Equipo 2): 1969721
+.
+San Justo Peatonal (Equipo 1): 2033462
+.
+San Justo Peatonal (Equipo 2): 1840208
+.
+San Martin Auto (Equipo 1): 1978013
+.
+San Martin Auto (Equipo 2): 1970909
+.
+Villa del Parque: 2095734
+.
+Equipos Marca Melitta (2 confirmados)
+Ramos Mejía: 2437sbb00484
+.
+San Isidro: 61171
+.
+
+--------------------------------------------------------------------------------
+Nota sobre equipos sin número de serie: Existen otros 10 equipos identificados en las fuentes pero cuyos números de serie no están confirmados:
+En Cabildo (Equipo 2), se confirma que el equipo existe pero le falta la chapa técnica identificatoria
+.
+En Güemes (Equipo 2), el panel de control indica que el equipo está operativo pero el campo del número de serie está vacío
+.
+En los locales de 9 de Julio, Avellaneda, Flores y Parque Chacabuco, se reporta un equipo Cimbali en cada uno, pero el número de serie figura como "No especificado" en los informes técnicos
+.
+En Constitución y Callao y Corrientes, se confirma que operan con 2 equipos Cimbali cada uno, pero ninguno cuenta con el número de serie registrado en la documentación analizada
+.
+
+Basado en los archivos analizados y la consolidación de activos realizada, tenemos un total de 13 cafeteras operativas con el número de serie confirmado.
+A continuación, detallo los equipos confirmados por local y marca:
+Equipos Confirmados (13 unidades)
+Flores: Serie 1860973 (La Cimbali)
+.
+Grand Bourg: Serie 1859984 (La Cimbali)
+.
+Ramos Mejía: Serie 2437SBB00484 (Melitta)
+.
+San Fernando: Serie 1851676 (La Cimbali)
+.
+San Justo Peatonal: Serie 1840208 (La Cimbali)
+.
+San Martín Auto: Serie 1978013 (La Cimbali)
+.
+San Martín Peatonal: Serie 2107577 (La Cimbali)
+.
+San Miguel: Serie 2096509 (La Cimbali)
+.
+San Telmo: Serie 1850073 (La Cimbali)
+.
+Villa Urquiza (Equipo 1): Serie 1857847 (La Cimbali)
+.
+Villa Urquiza (Equipo 2): Serie 1843850 (La Cimbali)
+.
+Villa del Parque: Serie 2095734 (La Cimbali), validada mediante placa técnica fotográfica
+.
+Wilde: Serie 2095738 (La Cimbali)
+.
+Observaciones sobre datos faltantes:
+Locales sin serie confirmada: En Canning
+ y San Isidro
+ los informes mencionan la operatividad de los equipos pero no especifican el número de serie en el texto.
+Equipos sin placa: En el local Luján, el informe técnico explicita que el equipo no posee número identificatorio (S/N)
+.
+Segundos equipos: En San Miguel, se confirma la existencia de un segundo equipo operativo, pero su serie no aparece registrada en los informes actuales
+.
+Equipos no operativos: En San Martín Auto, se identificó la serie 1970909, pero corresponde a un equipo fuera de servicio utilizado únicamente como donante de repuestos
+.
+
+Basado en el análisis de los informes técnicos y siguiendo la instrucción de priorizar las placas técnicas fotografiadas y las secciones específicas de "EQUIPO INTERVENIDO", tenemos confirmados los números de serie de 11 equipos distribuidos en 9 locales.
+A continuación se detalla la lista de los equipos con serie confirmada:
+Francisco Álvarez: 1969718
+.
+José C. Paz: 1977240
+.
+Lanús Peatonal: 1856434
+.
+Liniers: 1842009
+.
+Merlo (Equipo 1): 1969719
+.
+Merlo (Equipo 2): 1851881
+.
+Moreno (Equipo 1): 2033458
+.
+Moreno (Equipo 2): 1838967
+.
+Palmas del Pilar: 1842014
+.
+Pompeya: 1841251 (Se confirma este número mediante la fotografía de la placa técnica
+, a pesar de que el texto del informe
+ menciona erróneamente el número de otro local).
+Quilmes Peatonal: 1855442 (El informe menciona que opera con 2 equipos bajo este número de serie o lote)
+.
+Casos especiales y validaciones:
+Luján: Aunque el equipo está identificado, el informe especifica explícitamente que el número de serie es "S/N (No identificado)"
+.
+Güemes: Los informes mencionan que existen dos equipos (N° 1 y N° 2), pero no registran sus números de serie en el texto
+. Se observa una etiqueta en una pieza interna (sensor volumétrico) con el número 1977235
+, pero no corresponde a la placa técnica del equipo completo.
+Otros locales: Locales como Laferrere, Lanús Este, Once, Parque Chacabuco y Primera Junta mencionan la operatividad de los equipos pero dejan el campo de número de serie vacío o como "No especificado"
+.

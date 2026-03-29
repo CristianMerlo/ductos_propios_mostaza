@@ -1,40 +1,24 @@
-PRESUPUESTO DE SERVICIO TÉCNICO INTEGRAL
-Cliente: Franquicia Junín (Mostaza)
-Ticket Ref: TK 104087
-Fecha: 28/01/2025
-Cotización Ref: 1 USD = $ 1.450 ARS
+I. DATOS GENERALES
+Servicio: MANTENIMIENTO PREVENTIVO DE CAFETERAS MDQ
+Técnico: Lucas Matias Ale
+Fecha de Ejecución: 10 y 11 de febrero
+Tipo de Cambio: $1.465,00
 
-DESCRIPCIÓN DEL SERVICIO
-Movilización de técnico especialista a sede Junín para realizar reparaciones críticas y mantenimiento preventivo.
-Modalidad: Visita con estadia (2 días).
-Logística: Viaje en Micro Larga Distancia + Alojamiento en Hotel Económico.
-Alcance Técnico:
+II. ALCANCE DEL SERVICIO
+Se realizará el mantenimiento preventivo integral de un TOTAL DE 7 Cimballi, garantizando la limpieza técnica, calibración y correcto funcionamiento de todos los equipos en las siguientes sucursales:
+Mostaza Los Gallegos
+Mostaza Paseo Aldrey
+Mostaza La Perla
+Mostaza Mar del Plata Peatonal
 
-Cafeteras Cimballi: Reparación de pérdida de agua (Equipo 1) y Sistema de Molienda (Equipo 2).
-Broiler: Reparación de encendido (Cambio de chispero) y limpieza profunda de tracción.
-Preventivos: Limpieza condensadores (Cattabriga) y revisión general cocina (Freidoras).
-DETALLE DE COSTOS FIJOS (Común a ambas opciones)
-Estos costos son necesarios independientemente de si se instalan los kits de mejora o no.
-Honorarios Técnicos (18.5 Horas Totales: 9h Labor + 9.5h Viaje a $25/h): USD 462,50
-Logística y Viáticos (Pasajes + Hotel + Traslados = aprox. $182.000 ARS): USD 125,50
-Repuesto Crítico (1 Ignitor Alternativo Broiler): USD 96,00
-Insumos Menores (O-rings, sellos básicos, limpieza): USD 30,00
-SUBTOTAL OPERATIVO: USD 714,00
+III. DESGLOSE DE INVERSIÓN (USD)
+Ítem	Descripción	Detalle	Total
+1.0	Honorarios Técnicos	28 hs totales (18hs Laborales + 10hs Traslado)	$700,00
+2.0	Transporte y Viáticos	Pasaje Bus IDA/VTA + Traslados entre los 4 locales	$273,04
+3.0	Alojamiento	1 Noche de estadía en Mar del Plata	$175,24
+TOTAL DEL PRESUPUESTO	INTERVENCIÓN DE 7 EQUIPOS		USD 1.148,28
 
-OPCIONES DE INVERSIÓN
-OPCIÓN 1: RECUPERACIÓN OPERATIVA (BÁSICA)
-Solo se realizan las reparaciones urgentes para que los equipos enciendan y funcionen. No incluye cambio preventivo de piezas internas mayores.
-
-Costo Operativo Base: USD 714,00
-Kits de Mantenimiento: NO INCLUIDOS
-TOTAL ESTIMADO OPCIÓN 1: USD 714,00
-
-OPCIÓN 2: PUESTA A PUNTO Y EXTENSIÓN DE VIDA ÚTIL (RECOMENDADA)
-Incluye todo lo anterior, más la instalación de los Kits Originales Cimballi. Se dejan las máquinas a nuevo aprovechando la mano de obra de la visita.
-
-Costo Operativo Base: USD 714,00
-Kit E3 (Service Mayor): USD 531,68
-Kit E1 (Mantenimiento Grupo): USD 446,11
-Kit B (Válvulas/Juntas): USD 215,43
-Kit E2 (Mantenimiento Menor): USD 91,12
-TOTAL ESTIMADO OPCIÓN 2: USD 1.998,34
+IV. CONSIDERACIONES TÉCNICAS
+FOCO: El presupuesto cubre exclusivamente la mano de obra técnica para el mantenimiento preventivo de 7 unidades de cafetería.
+VALIDEZ: Los costos logísticos están basados en la cotización vigente al 03/02/2026.
+CONFIRMACIÓN: Se requiere la confirmación de la presente cotización para proceder con reservas.

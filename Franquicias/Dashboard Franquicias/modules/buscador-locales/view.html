@@ -1,0 +1,140 @@
+<div class="module-view fade-in">
+    <button class="btn-back" onclick="window.location.reload()">← Volver al Dashboard</button>
+
+    <div class="card">
+        <header class="module-header">
+            <h2>🔍 Buscador de Locales</h2>
+            <p>Encuentra información detallada de sucursales por nombre o sigla.</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="store-search-input" placeholder="Ej: FLORIDA, ALDREY, BOEDO..." autocomplete="off">
+            <div id="search-results-count" class="results-info">Ingresa un nombre o sigla para comenzar</div>
+        </div>
+
+        <div id="stores-grid" class="stores-results-grid">
+            <!-- Search results will appear here -->
+        </div>
+    </div>
+</div>
+
+<style>
+    .module-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .search-container {
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    #store-search-input {
+        width: 100%;
+        padding: 1.2rem 1.5rem;
+        font-size: 1.1rem;
+        border: 2px solid #eee;
+        border-radius: var(--border-radius);
+        font-family: 'Roboto', sans-serif;
+        transition: var(--transition);
+        outline: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    }
+
+    #store-search-input:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 8px 20px rgba(211, 47, 47, 0.1);
+    }
+
+    .results-info {
+        margin-top: 0.8rem;
+        font-size: 0.85rem;
+        color: var(--light-text);
+        font-weight: 500;
+    }
+
+    .stores-results-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .store-card {
+        background: #fdfdfd;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        padding: 1.5rem;
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .store-card:hover {
+        border-color: var(--primary-color);
+        background: #fff;
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .store-name {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: var(--secondary-color);
+        border-bottom: 1px solid #f0f0f0;
+        padding-bottom: 0.5rem;
+        text-transform: uppercase;
+    }
+
+    .store-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .store-info-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        background: #fdf2f2;
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 0.5rem 0;
+    }
+
+    .store-info-group .store-detail:last-child {
+        grid-column: span 2;
+        border-top: 1px dashed rgba(211, 47, 47, 0.2);
+        padding-top: 0.5rem;
+    }
+
+    .store-divider {
+        height: 1px;
+        background: #f0f0f0;
+        margin: 0.5rem 0;
+    }
+
+    .detail-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: var(--light-text);
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    .detail-value {
+        font-size: 0.95rem;
+        font-weight: 500;
+        word-break: break-word;
+    }
+
+    .badge-provincia {
+        align-self: flex-start;
+        background: var(--bg-color);
+        padding: 3px 10px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+    }
+</style>

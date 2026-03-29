@@ -1,8 +1,44 @@
-
-Melitta
-Cata
-PHU
-Acarameladora
-Microondas
-Freezer de carnes y de papas
-
+Fecha de inspección: 27 y 28 de Marzo de 2026
+Ticket: 117017
+Tiempo de Labor: 2 Jornadas
+Técnico interviniente: Tomás Vera
+Local / Sucursal: Santa Rosa, La Pampa
+Equipo: Máquina de café espresso Cimbali
+Contador de erogaciones (Shots): 88.956
+Número de Serie: 1843852
+1. ESTADO ACTUAL DEL EQUIPO
+El equipo ha quedado operativo con un rendimiento general estimado del 70%. Es capaz de despachar bebidas, aunque presenta limitaciones operativas específicas debido a la falta de repuestos.
+Solución paliativa implementada: Ante la imposibilidad de espumar la leche, se ha recalibrado la receta aumentando la proporción de agua y café para completar el volumen de los vasos y evitar el desperdicio de leche.
+Error 54 (Resistencia de grupo): Detectado, de impacto leve. Permite la operatividad pero requerirá reemplazo a futuro.
+2. FALLAS REPORTADAS Y ACCIONES CORRECTIVAS REALIZADAS
+Durante la intervención se diagnosticaron y solucionaron temporal o definitivamente los siguientes inconvenientes:
+Error 66 (Falla en erogación de americanos y cortados):
+Causa: Válvula EVA con vástago roto, impidiendo la succión magnética.
+Acción: Se procedió a rotar la válvula G-SOL (perteneciente al circuito de Matcha) a la posición de la válvula EVA.
+Consecuencia: El circuito de café quedó operativo, inhabilitando por completo el circuito de Matcha (el cual ya presentaba rotura de plásticos, fugas y falta de uso).
+Fuga de vapor y agua (Válvula EM): Se reemplazó la válvula EM, la cual permitía un paso excesivo de vapor y generaba pérdida de agua.
+Falla en caudalímetro: El volumétrico presentaba fallas de lectura y fue reemplazado.
+Mantenimiento de Grupo: Se realizó limpieza profunda del grupo, limpieza de fotocélulas y recambio del Kit de grupo.
+Fuga en manguera semi-rígida: Fue detectada y reparada in situ.
+Tratamiento de agua: Se verificó el funcionamiento del ablandador de agua; el mismo se encuentra operativo, pero se detectó un nivel inadecuado de sal (se requiere reposición por parte del local).
+3. OBSERVACIONES CRÍTICAS Y RIESGOS POTENCIALES (Pendientes)
+Se detectaron fallas estructurales y de componentes que comprometen el funcionamiento a corto y mediano plazo:
+Higiene y Sanitización (Presencia de Hongos): Se detectó la presencia de hongos en la parte inferior del contenedor/barril. Es mandatorio realizar un protocolo de limpieza profunda que incluye: desconexión de equipos, inyección de producto químico, purgado completo de toda la cañería/sistema de filtrado y reconexión. Esta labor requiere dejar el local sin suministro de agua durante varias horas.
+Sistema de Emulsión de Leche: Inoperable. La bomba de leche carece de fuerza de succión y la válvula de aire (EAR 1) presenta fallas, provocando que el sistema escupa aire en lugar de espumar.
+Riesgo Eléctrico: El flexible de la bomba presenta fallas. De generarse una fuga de agua en este sector, existe un alto riesgo de que se active el disyuntor eléctrico del local.
+Sistema Mecánico del Grupo: El tornillo sin fin presenta óxido severo. Existe riesgo inminente de que el grupo se trabe o sufra una rotura mecánica grave.
+Sistema Térmico: Ausencia/Falla de la protección térmica lateral de la caldera principal, lo que puede derivar en un déficit crónico de temperatura en el equipo. El sensor de sobrepresión en mal estado está afectando directamente la temperatura de la leche.
+4. LISTADO DE REPUESTOS SOLICITADOS (Por orden de prioridad)
+Prioridad Urgente (Críticos para evitar parada de equipo o daños mayores):
+Tornillo sin fin.
+Kit E3 (Muelas de molino - presentan desgaste excesivo).
+Flexible de bomba completo.
+Protección térmica lateral (caldera grande).
+Sensor de sobrepresión.
+Válvula EAR (Se requieren 2; mínimo 1 indispensable).
+Válvulas ELF 1 y ELF 2 (Se requieren 2; mínimo 1 indispensable).
+Prioridad Alta (Necesarios para restituir el 100% de la operatividad):
+8. Bomba de leche.
+9. Válvula de aire (EAR 1).
+Prioridad Media:
+10. Mixer completo de Matcha (Necesario para rehabilitar este circuito y evitar fugas durante los lavados).

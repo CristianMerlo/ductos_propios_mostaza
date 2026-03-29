@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Reestructuración de Tarifas Técnicas 2026</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #D32F2F;
+            --secondary-color: #2c2c2c;
+            --accent-color: #B71C1C;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+            --white: #ffffff;
+            --border-radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%);
+            color: var(--white);
+            padding: 40px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .header-date {
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .header-logo {
+            background: var(--white);
+            padding: 12px;
+            border-radius: 8px;
+
+            display: {
+                    {
+                    LOGO_DISPLAY
+                }
+            }
+
+            ;
+        }
+
+        .header-logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        main {
+            padding: 50px 60px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--secondary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: #f8f9fa;
+            color: var(--secondary-color);
+            text-align: left;
+            padding: 12px;
+            border-bottom: 2px solid #eee;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .card {
+            background: #fdfdfd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #aaa;
+            font-size: 0.85rem;
+            border-top: 1px solid #eee;
+            background: #fafafa;
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .print-btn:hover {
+            background: var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        @media print {
+            .print-btn {
+                display: none;
+            }
+
+            body {
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-btn" onclick="window.print()">Imprimir / Guardar PDF</button>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Propuesta de Reestructuración de Tarifas Técnicas 2026</h1>
+                <div class="header-date">19 de Febrero, 2026</div>
+            </div>
+            <div class="header-logo"><img src="data:image/png;base64,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" alt="Logo"></div>
+        </header>
+        <main>
+            <h1>Propuesta de Reestructuración de Tarifas Técnicas 2026</h1>
+<h2>1. Contexto y Diagnóstico</h2>
+El esquema anterior de <b>25 USD/hora con un mínimo de 2 horas</b> ha quedado desactualizado frente a la realidad operativa del 2026. El análisis de costos revela que en servicios de media y larga distancia, el gasto logístico y el tiempo de traslado no facturado consumen hasta el 70% del margen técnico, lo que hace imperativa una nivelación tarifaria.
+<h2>2. Investigación de Mercado y Logística</h2>
+Para esta propuesta, se realizó un relevamiento exhaustivo en dos frentes críticos:
+<h3>A. Benchmarking de Competencia (Service Partner)</h3>
+<ul><li><b>Desorden Operativo</b>: Se identificó que el sistema del principal competidor carece de una lógica de radios clara, lo que genera fricciones con los clientes por cargos de viáticos impredecibles.</li><li><b>Costos de Entrada</b>: Una visita técnica base de la competencia se sitúa hoy en los <b>$52.000 + IVA</b>, actuando como un "piso" de mercado.</li><li><b>Viajes al Interior</b>: Los costos de traslado y estadía para el interior del país son facturados con márgenes de seguridad que elevan el costo total entre <b>$1.1M y $1.3M ARS</b> por intervención.</li></ul>
+<h3>B. Análisis Logístico (Cabify Empresas)</h3>
+Se investigaron las tarifas dinámicas de <b>Cabify Empresas</b> tomando como "Punto Cero" el Congreso Nacional (CABA). Los hallazgos muestran:
+<ul><li><b>Radio 0-30 km</b>: El costo promedio de ida y vuelta se mantiene en un rango manejable ($15k-$25k), justificando el cargo logístico base de la Zona 1.</li><li><b>Incremento Geométrico</b>: Superada la barrera de los 30 km (Zonas como Moreno, Canning o Pilar), el costo logístico escala por encima de los <b>$45.000</b>, sumado a un mínimo de 1.5 horas de tiempo de traslado del técnico.</li></ul>
+<h2>3. Nuevo Modelo: Radios y Protección del Margen</h2>
+A diferencia de otros proveedores, nuestra propuesta se basa en una <b>Tarifa Técnica de 30 USD/hora</b>, aplicada de forma transparente según la ubicación exacta de cada local:
+<table><thead><tr><th>Zona</th><th>Alcance (km)</th><th>Mínimo de Horas</th><th>Cargo Logístico (Viático)</th><th>Justificación</th></tr></thead><tbody><tr><td><b>Zona 1</b></td><td>0 - 30 km</td><td><b>2 Horas</b></td><td>$20.000</td><td>Cobertura en CABA y 1er cordón.</td></tr><tr><td><b>Zona 2</b></td><td>30 - 60 km</td><td><b>3 Horas</b></td><td>$50.000</td><td>Compensa el traslado a zonas alejadas (Moreno, Tigre).</td></tr><tr><td><b>Zona 3</b></td><td>60 - 120 km</td><td><b>4 Horas</b></td><td>$100.000</td><td>Cubre logística de alto impacto (Luján, La Plata).</td></tr><tr><td><b>Interior</b></td><td>> 120 km</td><td><b>4 Horas</b></td><td>Gastos + 50% Hs Viaje</td><td>Logística dedicada de larga distancia.</td></tr></tbody></table><i>Nota: Todos los cálculos específicos por sucursal se encuentran detallados en el archivo `Clasificacion de Locales Enriquecida.xlsx`.</i>
+<h2>4. Mejoras y Beneficios Propuestos</h2>
+<ul><li><b>Claridad Tarifaria</b>: Se elimina la incertidumbre de los "viáticos variables". El cliente conoce el costo exacto antes de la visita.</li><li><b>Sostenibilidad del Margen</b>: El aumento del mínimo de horas en zonas alejadas protege el valor hora del técnico, asegurando que la empresa no "pague para trabajar".</li><li><b>Flexibilidad Operativa</b>: El modelo permite absorber las fluctuaciones de tarifas de transporte (Cabify) mediante un cargo logístico fijo bien dimensionado.</li></ul>
+<h2>5. Resumen de Aplicación</h2>
+<b>Se establece una tarifa unificada de 30 USD/hora de mano de obra pura, la cual se facturará con un mínimo de 2, 3 o 4 horas dependiendo exclusivamente del radio de ubicación del local respecto al punto de origen en Congreso.</b>
+        </main>
+        <footer>
+            <p>&copy; 2026 Mantenimiento Franquicias Mostaza - Informe Ejecutivo de Gestión</p>
+        </footer>
+    </div>
+</body>
+
+</html>

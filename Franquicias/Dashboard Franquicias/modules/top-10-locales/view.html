@@ -1,0 +1,116 @@
+<div class="module-view fade-in">
+    <button class="btn-back" onclick="window.location.reload()">← Volver al Dashboard</button>
+
+    <div class="card">
+        <header class="module-header">
+            <h2>🏆 TOP 10 Locales</h2>
+            <p>Ranking de performance basado en métricas de mantenimiento y respuesta técnica.</p>
+        </header>
+
+        <div class="ranking-container">
+            <table class="ranking-table">
+                <thead>
+                    <tr>
+                        <th>Pos.</th>
+                        <th>Local</th>
+                        <th>Calificación</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="pos">1</td>
+                        <td><strong>Sucursal Florida</strong></td>
+                        <td>9.8</td>
+                        <td><span class="badge success">Excelente</span></td>
+                    </tr>
+                    <tr>
+                        <td class="pos">2</td>
+                        <td><strong>Alto Palermo</strong></td>
+                        <td>9.5</td>
+                        <td><span class="badge success">Excelente</span></td>
+                    </tr>
+                    <tr>
+                        <td class="pos">3</td>
+                        <td><strong>Abasto Shopping</strong></td>
+                        <td>9.2</td>
+                        <td><span class="badge success">Excelente</span></td>
+                    </tr>
+                    <!-- More mock data -->
+                    <tr>
+                        <td class="pos">4</td>
+                        <td><strong>Sucursal Cabildo</strong></td>
+                        <td>8.9</td>
+                        <td><span class="badge info">Muy Bueno</span></td>
+                    </tr>
+                    <tr>
+                        <td class="pos">5</td>
+                        <td><strong>Plaza Oeste</strong></td>
+                        <td>8.7</td>
+                        <td><span class="badge info">Muy Bueno</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    .module-header {
+        margin-bottom: 2rem;
+        border-bottom: 2px solid var(--bg-color);
+        padding-bottom: 1rem;
+    }
+
+    .ranking-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+    }
+
+    .ranking-table th {
+        text-align: left;
+        padding: 15px;
+        background: #f8f9fa;
+        color: var(--secondary-color);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.9rem;
+    }
+
+    .ranking-table td {
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .pos {
+        font-weight: 800;
+        color: var(--primary-color);
+        width: 50px;
+    }
+
+    .badge {
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .badge.success {
+        background: #e8f5e9;
+        color: #2e7d32;
+    }
+
+    .badge.info {
+        background: #e3f2fd;
+        color: #1976d2;
+    }
+
+    @media (max-width: 600px) {
+
+        .ranking-table th:nth-child(3),
+        .ranking-table td:nth-child(3) {
+            display: none;
+        }
+    }
+</style>

@@ -1,0 +1,7 @@
+
+Valor 1 hora: USD 25
+
+Valor por ticket repetido o mal realizado: 0
+
+Valor por ticket solucionado de forma remota: 0
+

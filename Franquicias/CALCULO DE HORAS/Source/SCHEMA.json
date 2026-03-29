@@ -1,0 +1,21 @@
+{
+    "codigo": "Código",
+    "sucursal": "Sucursal",
+    "cod_sucursal": "Cód. de Sucursal",
+    "incidencia": "Incidencia",
+    "descripcion": "Descripción",
+    "ultima_respuesta": "Última Respuesta",
+    "mensaje_resolucion": "Mensaje de Resolución",
+    "fecha_resolucion": "Fecha de Resolución",
+    "estado": "Estado",
+    "tecnico": "Técnico Asignado",
+    "zona": "Zona",
+    "km": "Km",
+    "valor_hora": "Valor Hora (USD)",
+    "hs_minimas": "Hs Mínimas",
+    "hs_chat": "HS_Chat",
+    "hs_final": "HS_Final",
+    "usd": "USD",
+    "observaciones_audit": "Observaciones_Audit",
+    "check": "Check"
+}

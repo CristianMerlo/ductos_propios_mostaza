@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Reestructuración de Tarifas Técnicas 2027 — Mostaza</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #D32F2F;
+            --secondary-color: #2c2c2c;
+            --accent-color: #B71C1C;
+            --text-color: #333333;
+            --light-text: #666666;
+            --bg-color: #f4f7f6;
+            --white: #ffffff;
+            --border-radius: 12px;
+            --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+            --header-gradient: linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            min-height: 297mm;
+            /* Proporción A4 aprox */
+        }
+
+        header {
+            background: var(--header-gradient);
+            color: var(--white);
+            padding: 50px 70px;
+            text-align: left;
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            line-height: 1.1;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .date-box {
+            margin-top: 20px;
+            font-size: 1rem;
+            opacity: 0.8;
+            font-weight: 400;
+        }
+
+        main {
+            padding: 50px 70px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin: 20px 0 10px 0;
+            text-transform: none;
+        }
+
+        p,
+        ul {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: var(--text-color);
+            text-align: justify;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        b {
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        .important {
+            color: var(--primary-color);
+            font-weight: 800;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 12px;
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        .note {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-top: 5px;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 25px 70px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--light-text);
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+                width: 100%;
+                border-radius: 0;
+            }
+
+            header {
+                -webkit-print-color-adjust: exact;
+                padding: 40px 60px;
+            }
+
+            main {
+                padding: 40px 60px;
+            }
+
+            h2 {
+                border-bottom: 2px solid var(--primary-color);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Propuesta de Reestructuración de Tarifas Técnicas</h1>
+            <p>2027</p>
+            <div class="date-box">05 de Marzo, 2027</div>
+        </header>
+
+        <main>
+            <section>
+                <h2>1. Contexto y Diagnóstico</h2>
+                <p>El esquema anterior de <b>30 USD/hora</b> con un mínimo de 2 horas ha quedado desactualizado frente a
+                    la realidad operativa del <b>2027</b>. El análisis de costos revela que en servicios de media y
+                    larga distancia, el gasto logístico y el tiempo de traslado no facturado consumen hasta el 70% del
+                    margen técnico, lo que hace imperativa una nivelación tarifaria.</p>
+            </section>
+
+            <section>
+                <h2>2. Investigación de Mercado y Logística</h2>
+                <p>Para esta propuesta, se realizó un relevamiento exhaustivo en dos frentes críticos:</p>
+
+                <h3>A. Benchmarking de Competencia (Service Partner)</h3>
+                <ul>
+                    <li><b>Desorden Operativo:</b> Se identificó que el sistema del principal competidor carece de una
+                        lógica de radios clara, lo que genera fricciones con los clientes por cargos de viáticos
+                        impredecibles.</li>
+                    <li><b>Costos de Entrada:</b> Una visita técnica base de la competencia se sitúa hoy en los
+                        <b>$55.000 + IVA</b>, actuando como un "piso" de mercado.</li>
+                    <li><b>Viajes al Interior:</b> Los costos de traslado y estadía para el interior del país son
+                        facturados con márgenes de seguridad que elevan el costo total entre $1.2M y $1.4M ARS por
+                        intervención.</li>
+                </ul>
+
+                <h3>B. Análisis Logístico (Cabify Empresas)</h3>
+                <p>Se investigaron las tarifas dinámicas de Cabify Empresas tomando como "Punto Cero" el Congreso
+                    Nacional (CABA). Los hallazgos muestran:</p>
+                <ul>
+                    <li><b>Radio 0-30 km:</b> El costo promedio de ida y vuelta se mantiene en un rango manejable
+                        ($18k-$28k), justificando el cargo logístico base de la Zona 1.</li>
+                    <li><b>Incremento Geométrico:</b> Superada la barrera de los 30 km (Zonas como Moreno, Canning o
+                        Pilar), el costo logístico escala por encima de los $50.000, sumado a un mínimo de 1.5 horas de
+                        tiempo de traslado del técnico.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Nuevo Modelo: Radios y Protección del Margen</h2>
+                <p>A diferencia de otros proveedores, nuestra propuesta se basa en una <span class="important">Tarifa
+                        Técnica de 35 USD/hora</span>, aplicada de forma transparente según la ubicación exacta de cada
+                    local:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Zona</th>
+                            <th>Alcance (km)</th>
+                            <th>Mínimo de Horas</th>
+                            <th>Cargo Logístico (Viático)</th>
+                            <th>Justificación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Zona 1</b></td>
+                            <td>0 - 30 km</td>
+                            <td>2 Horas</td>
+                            <td>$20.000</td>
+                            <td>Cobertura en CABA y 1er cordón.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Zona 2</b></td>
+                            <td>30 - 60 km</td>
+                            <td>3 Horas</td>
+                            <td>$50.000</td>
+                            <td>Compensa el traslado a zonas alejadas (Moreno, Tigre).</td>
+                        </tr>
+                        <tr>
+                            <td><b>Zona 3</b></td>
+                            <td>60 - 120 km</td>
+                            <td>4 Horas</td>
+                            <td>$100.000</td>
+                            <td>Cubre logística de alto impacto (Luján, La Plata).</td>
+                        </tr>
+                        <tr>
+                            <td><b>Interior</b></td>
+                            <td>> 120 km</td>
+                            <td>4 Horas</td>
+                            <td>Gastos + 50% Hs Viaje</td>
+                            <td>Logística dedicada de larga distancia.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="note">Nota: Todos los cálculos específicos por sucursal se encuentran detallados en el archivo
+                    <code>Clasificacion de Locales Enriquecida 2027.xlsx</code>.</p>
+            </section>
+
+            <section>
+                <h2>4. Mejoras y Beneficios Propuestos</h2>
+                <ul>
+                    <li><b>Claridad Tarifaria:</b> Se elimina la incertidumbre de los "viáticos variables". El cliente
+                        conoce el costo exacto antes de la visita.</li>
+                    <li><b>Sostenibilidad del Margen:</b> El aumento del mínimo de horas en zonas alejadas protege el
+                        valor hora del técnico, asegurando que la empresa no "pague para trabajar".</li>
+                    <li><b>Flexibilidad Operativa:</b> El modelo permite absorber las fluctuaciones de tarifas de
+                        transporte (Cabify) mediante un cargo logístico fijo bien dimensionado.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Resumen de Aplicación</h2>
+                <p>Se establece una tarifa unificada de <span class="important">35 USD/hora</span> de mano de obra pura,
+                    la cual se facturará con un mínimo de 2, 3 o 4 horas dependiendo exclusivamente del radio de
+                    ubicación del local respecto al punto de origen en Congreso.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2027 Mantenimiento Franquicias Mostaza - Informe Ejecutivo de Gestión</p>
+        </footer>
+    </div>
+</body>
+
+</html>
