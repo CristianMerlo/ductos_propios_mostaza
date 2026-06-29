@@ -476,20 +476,6 @@ const localesData = [
         "tecnico": "Francisco Rametta"
     },
     {
-        "sigla_sistema": "FCAS",
-        "sigla_tickets": "FCAST",
-        "regional": "Martin Medina",
-        "supervisor": "Marina Gonzalez",
-        "local": "CASTELAR",
-        "email": "castelar@mostazaweb.com.ar",
-        "direccion": "Gdor. Inocencio arias 2396",
-        "ciudad": "CASTELAR",
-        "provincia": "BUENOS AIRES",
-        "tipo_local": "A la calle",
-        "razon_social": "Parador 71 S.R.L.",
-        "tecnico": "Fernando Soria"
-    },
-    {
         "sigla_sistema": "FLP2",
         "sigla_tickets": "FLPCA",
         "regional": "Hernán Dalto",
@@ -897,7 +883,7 @@ const localesData = [
     },
     {
         "sigla_sistema": "FCQU",
-        "sigla_tickets": "FFCQU",
+        "sigla_tickets": "FMQCA",
         "regional": "Cecilia Riccadonna",
         "supervisor": "Aylen Crespin",
         "local": "CARRE QUILMES",
