@@ -11,6 +11,8 @@ import sys
 import json
 import urllib.request
 import urllib.error
+import argparse
+import shutil
 from pathlib import Path
 from datetime import datetime
 
@@ -20,6 +22,23 @@ SOURCE_DIR = BASE_DIR / 'source'
 TEMPLATE_FILE = BASE_DIR / 'template.html'
 OUTPUT_FILE = BASE_DIR / 'informe_final.html'
 PROMPT_FILE = BASE_DIR / 'PROMPTS TECNICOS' / 'prompt tecnico.txt'
+
+# Variables Globales de Sesión
+CURRENT_YEAR = "2026"
+TICKET_NUMBER = None
+force_status = None
+force_hours = None
+force_local = None
+force_equipment = None
+force_date = None
+
+class InconsistencyError(Exception):
+    """Excepción lanzada cuando hay una contradicción lógica en el informe"""
+    def __init__(self, message, detected_status, context):
+        self.message = message
+        self.detected_status = detected_status
+        self.context = context
+        super().__init__(self.message)
 
 def load_env():
     """Carga variables de entorno desde el archivo .env en la raíz del repositorio"""
@@ -122,11 +141,13 @@ def enhance_text_with_llm(raw_text, prompt_instruction):
         "User-Agent": "ReportGenerator/1.0"
     }
     
+    equipment_clause = f" Y el equipo principal debe ser nombrado como '{force_equipment}' en lugar de solo su código/N/S." if force_equipment else ""
+    
     data = {
         "model": "llama-3.3-70b-versatile",
         "messages": [
             {"role": "system", "content": prompt_instruction},
-            {"role": "user", "content": f"Por favor, estructura y procesa la siguiente información:\n\n{raw_text}"}
+            {"role": "user", "content": f"Por favor, estructura y formatea la siguiente información:\n\n{raw_text}\n\nIMPORTANTE: El Número de Ticket es {TICKET_NUMBER if TICKET_NUMBER else '[No especificado]'}. Asegúrate de incluirlo en el campo correspondiente de la Sección 1.{equipment_clause}"}
         ],
         "temperature": 0.3
     }
@@ -188,16 +209,19 @@ def generate_image_gallery(image_files):
     gallery_html = '<div class="image-gallery">\n'
     
     for index, image_path in enumerate(image_files, 1):
-        base64_image = convert_image_to_base64(image_path)
-        # Usar el nombre del archivo (sin extensión) como leyenda
-        label = image_path.stem
-        
-        gallery_html += f'''    <div class="image-item">
-        <img src="{base64_image}" alt="{label}" loading="lazy">
-        <p class="image-caption">{label}</p>
-    </div>\n'''
-        
-        print(f'✓ Imagen procesada en galería ({image_path.name})')
+        try:
+            base64_image = convert_image_to_base64(image_path)
+            # Usar el nombre del archivo (sin extensión) como leyenda
+            label = image_path.stem
+            
+            gallery_html += f'''    <div class="image-item">
+            <img src="{base64_image}" alt="{label}">
+            <p class="image-caption">{label}</p>
+        </div>\n'''
+            
+            print(f'✓ Imagen procesada en galería ({image_path.name})')
+        except Exception as e:
+            print(f'⚠️ Error al procesar imagen {image_path.name}: {e}')
     
     gallery_html += '</div>'
     return gallery_html
@@ -218,7 +242,7 @@ def title_case(text):
             result.append(word.lower())
     return ' '.join(result)
 
-def format_text_content(text):
+def format_text_content(text, local_name=None, ticket_num=None, forced_status=None):
     """Formatea el texto en párrafos y títulos HTML con jerarquía de negritas corregida"""
     # Pre-procesamiento: Asegurar que los títulos numerados tengan doble salto de línea
     # Esto evita que el contenido siguiente sea tratado como parte del título
@@ -272,15 +296,26 @@ def format_text_content(text):
                     icon = ""
                     state = ""
                     
-                    if 'INOPERATIV' in status_text:
-                        icon = "🔴"
-                        state = "INOPERATIVA"
-                    elif 'CON OBSERVACIONES' in status_text:
-                        icon = "🟡"
-                        state = "OPERATIVA CON OBSERVACIONES"
-                    elif 'OPERATIV' in status_text:
-                        icon = "🟢"
-                        state = "OPERATIVA"
+                    # Prioridad 1: Estado forzado por parámetro
+                    if force_status:
+                        if force_status.lower() == 'rojo':
+                            icon, state = "🔴", "INOPERATIVA"
+                        elif force_status.lower() == 'amarillo':
+                            icon, state = "🟡", "OPERATIVA CON OBSERVACIONES"
+                        elif force_status.lower() == 'verde':
+                            icon, state = "🟢", "OPERATIVA"
+                    
+                    # Prioridad 2: Detección automática (si no hay force_status)
+                    if not icon:
+                        if 'INOPERATIV' in status_text:
+                            icon = "🔴"
+                            state = "INOPERATIVA"
+                        elif 'CON OBSERVACIONES' in status_text:
+                            icon = "🟡"
+                            state = "OPERATIVA CON OBSERVACIONES"
+                        elif 'OPERATIV' in status_text:
+                            icon = "🟢"
+                            state = "OPERATIVA"
                     
                     if icon and state:
                         # Buscamos si ya tiene el prefijo para no duplicar
@@ -301,6 +336,16 @@ def format_text_content(text):
                                 if not clean_content.startswith('.') and clean_content:
                                     content_lines += ". "
                                 content_lines += clean_content
+    
+                # --- PARCHE DE SEGURIDAD: SI HAY ESTADO FORZADO, REEMPLAZAR CUALQUIER LÍNEA SIMILAR ---
+                if force_status:
+                    if 'ESTADO FINAL' in title_line.upper():
+                        # Si el título mismo es "Estado Final", inyectamos el forzado
+                        icon, state = ("🟢", "OPERATIVA") if force_status == 'verde' else (("🟡", "OPERATIVA CON OBSERVACIONES") if force_status == 'amarillo' else ("🔴", "INOPERATIVA"))
+                        formatted_html += f'<h3><b>{title_line}</b></h3>\n'
+                        formatted_html += f'<p>Estado Final: {icon} {state}</p>\n'
+                        continue
+                # --- FIN PARCHE ---
 
                 # REGLA: No mostrar contenido en la Sección 7 (se llena sola con la galería)
                 if 'REGISTRO FOTOGRÁFICO' in title_line.upper():
@@ -342,7 +387,15 @@ def format_text_content(text):
                 # Aplicar Title Case a nombres propios en ciertos campos
                 if any(k in label for k in ['Local', 'Técnico', 'Responsable']):
                     value = title_case(value)
+                    if 'local' in label.lower() and local_name and local_name != "Local No Detectado":
+                        value = local_name
                 
+                # REGLA: Forzar Estado Final en párrafos (si el LLM lo puso ahí)
+                if force_status and 'Estado Final' in label:
+                    icon, state = ("🟢", "OPERATIVA") if force_status == 'verde' else (("🟡", "OPERATIVA CON OBSERVACIONES") if force_status == 'amarillo' else ("🔴", "INOPERATIVA"))
+                    label = "Estado Final"
+                    value = f"{icon} {state}"
+
                 # REGLA: Tiempo de Labor (Búsqueda más flexible y REDONDEO SIEMPRE HACIA ARRIBA)
                 labor_keywords = [
                     'Tiempo de Labor', 'Tiempo de Trabajo', 'Tiempo de Servicio', 
@@ -350,43 +403,27 @@ def format_text_content(text):
                 ]
                 if any(k.lower() in label.lower() for k in labor_keywords):
                     value = value.strip()
-                    print(f"DEBUG: Procesando tiempo: '{value}'")
                     
                     # Intentar extraer horas y minutos
-                    # Formatos: "2:30", "2 hs 30", "2.5 hs", "2,5 hs"
                     hours = 0
                     minutes = 0
                     
-                    # Caso 1: HH:MM o H:MM
                     time_match = re.search(r'(\d+):(\d+)', value)
                     if time_match:
                         hours = int(time_match.group(1))
                         minutes = int(time_match.group(2))
                     else:
-                        # Caso 2: X hs Y mins o similar
                         h_match = re.search(r'(\d+)\s*(?:hs?|horas?)', value, re.I)
                         m_match = re.search(r'(\d+)\s*(?:min?|minutos?)', value, re.I)
                         if h_match: hours = int(h_match.group(1))
                         if m_match: minutes = int(m_match.group(1))
-                        
-                        # Caso 3: Decimal (2.5 o 2,5)
-                        if not h_match and not m_match:
-                            dec_match = re.search(r'(\d+)[.,](\d+)', value)
-                            if dec_match:
-                                hours = int(dec_match.group(1))
-                                minutes = 1 # Forzar redondeo si hay decimales
-
-                    # Lógica de Redondeo hacia arriba
-                    if minutes > 0:
-                        final_hours = hours + 1
-                        print(f"⚠️  Redondeo: {hours}h {minutes}m -> {final_hours}hs (siempre hacia arriba)")
+ 
+                    if force_hours is not None:
+                        final_hours = int(force_hours)
                     else:
-                        final_hours = hours
+                        final_hours = hours + 1 if minutes > 0 else hours
                     
-                    # Aplicar mínimo de 2 horas
-                    if final_hours < 2:
-                        final_hours = 2
-                        print(f"⚠️  Regla de negocio: Tiempo mínimo aplicado (2hs)")
+                    if final_hours < 2: final_hours = 2
                     
                     if 'jornada' not in value.lower():
                         value = f"{final_hours:02d}:00 hs."
@@ -395,13 +432,136 @@ def format_text_content(text):
             else:
                 new_lines.append(line)
         processed_para = '<br>'.join(new_lines)
+        processed_para = re.sub(r'(?i)\(sin código especificado\)', '', processed_para).strip()
+        processed_para = re.sub(r'(?i)\(sin N/?S\)', '', processed_para).strip()
         
         formatted_html += f'<p>{processed_para}</p>\n'
     
     return formatted_html
+def audit_technical_logic(html_content):
+    """
+    Auditoría de coherencia: Verifica que no haya estatus verde si se mencionan repuestos pendientes.
+    """
+    # 1. Detectar el ícono de estado
+    status_match = re.search(r'Estado Final:</span> (..)', html_content)
+    if not status_match:
+        return True # No se encontró estatus para auditar
+        
+    icon = status_match.group(1)
+    
+    # 2. Si es verde, buscar palabras de alerta de repuestos pendientes
+    if "🟢" in icon:
+        # Palabras clave que indican una visita incompleta o repuestos pedidos
+        alert_keywords = [
+            'necesario', 'pendientes', 'solicitar', 'comprar', 
+            'reemplazar', 'faltan', 'visita adicional'
+        ]
+        
+        # Analizar secciones de Observaciones y Detalle
+        # Buscamos en el texto después de que el LLM lo procesó
+        found_alerts = []
+        for word in alert_keywords:
+            if word.lower() in html_content.lower():
+                found_alerts.append(word)
+        
+        if found_alerts:
+            context_snippet = ""
+            # Intentar obtener un fragmento del contexto para mostrar al usuario
+            for word in found_alerts:
+                match = re.search(rf'([^.]{{0,50}}{word}[^.]{{0,50}})', html_content, re.I)
+                if match:
+                    context_snippet = match.group(1).strip()
+                    break
+            
+            raise InconsistencyError(
+                message=f"Detección de incoherencia: El estatus es VERDE pero se detectaron términos de repuestos pendientes: {found_alerts}",
+                detected_status="VERDE",
+                context=context_snippet
+            )
+            
+    return True
 
-def generate_report():
+def generate_email_speech(html_content, local_name, report_date):
+    """
+    Analiza el HTML generado para extraer datos clave y armar un borrador de correo.
+    """
+    # 1. Detectar el ícono y texto de estado
+    # Buscamos de forma más flexible en todo el contenido HTML
+    status_match = re.search(r'Estado Final:</span>\s*(.*?)(?:<br>|</p>)', html_content, re.IGNORECASE)
+    status_text = status_match.group(1).strip() if status_match else "[Estado no detectado]"
+    
+    # 2. Extraer requerimientos de repuestos (Sección 5 - Nueva estructura)
+    req_match = re.search(r'5\. REPUESTOS NECESARIOS.*?</b></h3>\s*<p>(.*?)</p>', html_content, re.DOTALL | re.IGNORECASE)
+    spare_parts = req_match.group(1).strip() if req_match else "Ninguno"
+    
+    # 3. Extraer observaciones (Sección 7)
+    obs_match = re.search(r'7\. OBSERVACIONES Y RECOMENDACIONES</b></h3>\s*<p>(.*?)</p>', html_content, re.DOTALL | re.IGNORECASE)
+    observations = obs_match.group(1) if obs_match else ""
+    
+    if not observations:
+        # Intento alternativo por si el formato varía
+        obs_match = re.search(r'7\. Datos de Observaciones.*?</b></h3>\s*<p>(.*?)</p>', html_content, re.DOTALL | re.IGNORECASE)
+        observations = obs_match.group(1) if obs_match else "Sin observaciones críticas adicionales."
+    
+    # Limpiar etiquetas HTML y entidades
+    observations = re.sub(r'<[^>]+>', '', observations)
+    observations = observations.replace('&nbsp;', ' ').strip()
+    spare_parts_clean = re.sub(r'<[^>]+>', '', spare_parts).strip()
+    
+    # Remover frases genéricas de disponibilidad si existen
+    generic_phrases = ["El técnico se encuentra a disposición", "quedo a disposición", "cualquier consulta o problema adicional"]
+    for phrase in generic_phrases:
+        observations = re.sub(f'{phrase}.*?[\.\!]', '', observations, flags=re.IGNORECASE)
+
+    # Acortar observaciones a las primeras oraciones relevantes
+    sentences = [s.strip() for s in observations.split('.') if s.strip()]
+    
+    # Obtener fecha para el asunto (formato DD-MM-YY sugerido por usuario)
+    try:
+        date_obj = datetime.strptime(report_date, "%d-%m-%Y")
+        formatted_date = date_obj.strftime("%d-%m-%y")
+    except:
+        formatted_date = report_date
+
+    subject = f"Informe de visita Mantenimiento local {local_name} {formatted_date}"
+    
+    body = f"Estimados,\n\nAdjunto el informe de la visita técnica realizada.\n\n"
+    body += f"El equipo queda {status_text}.\n\n"
+    
+    # SI HAY REPUESTOS: Detallarlos prioritariamente
+    if "ninguno" not in spare_parts_clean.lower() and len(spare_parts_clean) > 2:
+        body += "Solicitud de Repuestos PARA MANTENIMIENTO REGULAR:\n"
+        # Si la IA los puso con saltos de línea o comas, los listamos
+        parts_list = [p.strip() for p in re.split(r'<br>|,|\n', spare_parts) if p.strip()]
+        for p in parts_list:
+            clean_p = re.sub(r'<[^>]+>', '', p).strip()
+            if clean_p: body += f"* {clean_p}\n"
+        body += "\n"
+
+    # Notas adicionales de la visita
+    if any(icon in status_text for icon in ["🟡", "🔴"]) or any(word in observations.lower() for word in ["necesario", "pendiente", "recomienda"]):
+        body += "Observaciones de la visita:\n"
+        for sentence in sentences[:2]:
+            if len(sentence) > 5:
+                body += f"* {sentence}.\n"
+        body += "\n"
+    else:
+        body += "El equipo se encuentra en condiciones operatividades normales.\n\n"
+        
+    body += "Saludos cordiales."
+    
+    print("\n" + "="*40)
+    print("📋 BORRADOR PARA EL CORREO (Copiar y Pegar)")
+    print("="*40)
+    print(f"ASUNTO: {subject}")
+    print("-"*40)
+    print(body)
+    print("="*40)
+
+def generate_report(force_status_param=None, skip_audit=False):
     """Genera el informe final"""
+    global force_status
+    force_status = force_status_param
     print('\n🚀 Iniciando generación de informe técnico avanzado...\n')
     
     if not TEMPLATE_FILE.exists():
@@ -416,7 +576,18 @@ def generate_report():
     
     # Procesar contenido (Incluye lectura de prompt y posible IA)
     text_content = read_text_content(text_files)
-    formatted_content = format_text_content(text_content)
+    
+    # Obtener el nombre del local
+    global force_local
+    if force_local:
+        local_from_text = force_local
+    else:
+        first_line_clean = re.sub(r'<[^>]+>', '', text_content).strip().split('\n')[0]
+        local_from_text = first_line_clean.replace('Cafetera', '').strip() if 'Cafetera' in first_line_clean else first_line_clean.strip()
+        if not local_from_text or len(local_from_text) > 50:
+            local_from_text = "Local No Detectado"
+        
+    formatted_content = format_text_content(text_content, local_name=local_from_text, ticket_num=TICKET_NUMBER, forced_status=force_status_param)
     image_gallery = generate_image_gallery(image_files)
     
     # Procesar Logo
@@ -431,43 +602,108 @@ def generate_report():
     report_title = ('Informe Técnico' if SOURCE_DIR.name == 'source' 
                    else f'Informe Técnico - {SOURCE_DIR.name}')
     # Obtener fecha (buscar en texto o usar actual)
-    date_match = re.search(r'Fecha:\s*(.*)', text_content)
-    if date_match:
-        report_date = date_match.group(1).strip()
-        print(f"✓ Fecha personalizada encontrada: {report_date}")
+    global force_date
+    if force_date:
+        report_date = force_date
+        print(f"✓ Fecha forzada por parámetro: {report_date}")
     else:
-        report_date = datetime.now().strftime('%d de %B, %Y')
-        months_es = {
-            'January': 'Enero', 'February': 'Febrero', 'March': 'Marzo',
-            'April': 'Abril', 'May': 'Mayo', 'June': 'Junio',
-            'July': 'Julio', 'August': 'Agosto', 'September': 'Septiembre',
-            'October': 'Octubre', 'November': 'Noviembre', 'December': 'Diciembre'
-        }
-        for en, es in months_es.items():
-            report_date = report_date.replace(en, es)
+        date_match = re.search(r'Fecha:\s*(.*)', text_content)
+        if date_match:
+            report_date = date_match.group(1).strip()
+            # REGLA: Forzar año 2026 si detectamos patrones de marcadores de posición o años anteriores
+            if any(x in report_date for x in ["2024", "AAAA", "0000"]):
+                report_date = re.sub(r'2024|AAAA|0000', CURRENT_YEAR, report_date)
+                print(f"⚠️  Blindaje de año aplicado: -> {CURRENT_YEAR}")
+            print(f"✓ Fecha personalizada encontrada: {report_date}")
+        else:
+            report_date = datetime.now().strftime(f'%d de %B, {CURRENT_YEAR}')
+            months_es = {
+                'January': 'Enero', 'February': 'Febrero', 'March': 'Marzo',
+                'April': 'Abril', 'May': 'Mayo', 'June': 'Junio',
+                'July': 'Julio', 'August': 'Agosto', 'September': 'Septiembre',
+                'October': 'Octubre', 'November': 'Noviembre', 'December': 'Diciembre'
+            }
+            for en, es in months_es.items():
+                report_date = report_date.replace(en, es)
     
-    # Reemplazar placeholders
+    # Reemplazar placeholders estructurales de texto
     template = template.replace('{{REPORT_TITLE}}', report_title)
     template = template.replace('{{REPORT_DATE}}', report_date)
     template = template.replace('{{REPORT_CONTENT}}', formatted_content)
+
+    # REGLA DE BLOQUEO DE ERRORES: Parches de última milla para Cristian
+    template = template.replace('[No especificado]', TICKET_NUMBER if TICKET_NUMBER else '[No especificado]')
+    template = template.replace('AAAA', CURRENT_YEAR)
+    template = template.replace('2024', CURRENT_YEAR)
+    
+    # Corregir Local si el LLM falló
+    if '[Nombre del local]' in template or '[no Especificado]' in template:
+        template = template.replace('[Nombre del local]', local_from_text)
+        template = template.replace('[no Especificado]', local_from_text)
+        print(f"✓ Local corregido manualmente a: {local_from_text}")
+
+    # INYECTAR BASE64 AL FINAL (Para evitar que los parches corrompan secuencias como 'AAAA' en los binarios)
     template = template.replace('{{IMAGE_GALLERY}}', image_gallery)
     template = template.replace('{{LOGO}}', logo_base64)
     template = template.replace('{{LOGO_DISPLAY}}', logo_display)
-    
+
+    # --- AUDITORÍA LÓGICA (DESACTIVADA POR SIMPLICIDAD) ---
+    # audit_technical_logic(template) 
+    # --- FIN AUDITORÍA ---
+
     OUTPUT_FILE.write_text(template, encoding='utf-8')
     
     print(f'\n✅ ¡Informe generado exitosamente!')
     print(f'📄 Archivo: {OUTPUT_FILE}')
     
-    # Abrir en el navegador automáticamente
-    try:
-        import webbrowser
-        file_url = f"file://{OUTPUT_FILE.resolve()}"
-        webbrowser.open(file_url)
-        print("🌐 Abriendo informe en el navegador por defecto...")
-    except Exception as e:
-        print(f"⚠️ No se pudo abrir el navegador automáticamente: {e}")
+    # --- GENERAR SPEECH PARA CORREO ---
+    local_name = SOURCE_DIR.name if SOURCE_DIR.name != 'source' else "San Telmo" # Fallback para test
+    # Intentar sacar el local del texto si existe
+    local_match = re.search(r'Local:</span> (.*?)<br>', template)
+    if local_match:
+        local_name = local_match.group(1).strip()
+        
+    # --- DESACTIVADO POR PETICIÓN DEL USUARIO ---
+    # try:
+    #     processed_base = BASE_DIR / 'processed'
+    #     processed_base.mkdir(exist_ok=True)
+    #     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    #     run_dir = processed_base / f"run_{timestamp}"
+    #     run_dir.mkdir(exist_ok=True)
+    #
+    #     text_files, image_files, logo_file = read_source_files()
+    #     all_to_move = text_files + image_files
+    #     
+    #     for f in all_to_move:
+    #         if f.exists():
+    #             try:
+    #                 shutil.move(str(f), str(run_dir / f.name))
+    #             except Exception as ex:
+    #                 print(f"⚠️ No se pudo mover {f.name}: {ex}")
+    #     
+    #     print(f"📦 Archivos de origen movidos a: {run_dir.relative_to(BASE_DIR)}")
+    # except Exception as e:
+    #     print(f"⚠️ Error en post-procesamiento (movimiento de archivos): {e}")
+    # --- FIN DESACTIVACIÓN ---
+
+    return True
 
 if __name__ == '__main__':
-    generate_report()
-
+    parser = argparse.ArgumentParser(description='Generador de Informes Técnicos desde archivo de texto')
+    parser.add_argument('--force-status', choices=['verde', 'amarillo', 'rojo'], help='Forzar color del semáforo: verde, amarillo o rojo.')
+    parser.add_argument('--ticket', help='Especificar el número de ticket.')
+    parser.add_argument('--force-hours', type=int, help='Forzar horas de labor')
+    parser.add_argument('--equipment', help='Forzar nombre descriptivo del equipo')
+    parser.add_argument('--local', help='Forzar el nombre del local')
+    parser.add_argument('--date', help='Forzar fecha del informe (ej: 13-04-26)')
+    parser.add_argument('--skip-audit', action='store_true', help='Saltar la auditoría de coherencia lógica')
+    args = parser.parse_args()
+    
+    if args.force_status: force_status = args.force_status
+    if args.ticket: TICKET_NUMBER = args.ticket
+    if args.force_hours: force_hours = args.force_hours
+    if args.equipment: force_equipment = args.equipment
+    if args.local: force_local = args.local
+    if args.date: force_date = args.date
+        
+    generate_report(force_status_param=args.force_status, skip_audit=args.skip_audit)

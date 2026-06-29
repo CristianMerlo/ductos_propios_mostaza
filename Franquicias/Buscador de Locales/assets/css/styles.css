@@ -1,0 +1,377 @@
+/* 
+   Design System: Imagen Mostaza 
+   Project: Buscador de Locales (Standalone)
+*/
+
+:root {
+    --primary-color: #D32F2F;
+    --secondary-color: #2c2c2c;
+    --accent-color: #B71C1C;
+    --text-color: #333333;
+    --light-text: #666666;
+    --bg-color: #f4f7f6;
+    --white: #ffffff;
+    --border-radius: 12px;
+    --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    --premium-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    --header-gradient: linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%);
+    --transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --input-height: 80px;
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Header */
+.main-header {
+    background: var(--header-gradient);
+    color: var(--white);
+    padding: 2.5rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.brand h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.brand h1 span {
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.brand .subtitle {
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.logo-box {
+    background: var(--white);
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo-box img {
+    height: 40px;
+    width: auto;
+}
+
+/* Module Container */
+.card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 3rem;
+}
+
+.search-module-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem !important;
+}
+
+/* Search Hero Section */
+.search-hero-section {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    transition: var(--transition);
+}
+
+.search-icon-main {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    opacity: 0.6;
+    z-index: 10;
+    pointer-events: none;
+    transition: color 0.3s;
+}
+
+.main-search-wrapper:focus-within .search-icon-main {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+#store-search-input {
+    width: 100%;
+    height: var(--input-height);
+    padding: 0 40px 0 85px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 40px;
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+#store-search-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 45px rgba(211, 47, 47, 0.15);
+    transform: translateY(-3px);
+}
+
+#store-search-input::placeholder {
+    color: #bbb;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.results-info-premium {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: var(--light-text);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Results Grid */
+.stores-results-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* Store Card */
+.store-card {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 1.8rem;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.store-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.store-card:hover {
+    border-color: transparent;
+    background: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.store-card:hover::before {
+    opacity: 1;
+}
+
+.store-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 0.8rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.siglas-badge {
+    font-size: 0.75rem;
+    background: var(--bg-color);
+    color: var(--light-text);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.store-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.store-info-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    background: #fdf2f2;
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+    border: 1px solid rgba(211, 47, 47, 0.1);
+}
+
+.store-info-group .store-detail:last-child {
+    grid-column: span 2;
+    border-top: 1px dashed rgba(211, 47, 47, 0.2);
+    padding-top: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.store-divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin: 0.8rem 0;
+}
+
+.detail-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--light-text);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.detail-value {
+    font-size: 0.95rem;
+    font-weight: 500;
+    word-break: break-word;
+    color: var(--text-color);
+}
+
+.store-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.badge-provincia {
+    background: var(--secondary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-tipo {
+    background: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--white);
+    opacity: 0.9;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+.main-footer {
+    padding: 3rem;
+    text-align: center;
+    color: var(--light-text);
+    font-size: 0.85rem;
+    border-top: 1px solid #eee;
+    background: #fafafa;
+    margin-top: 4rem;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .brand h1 {
+        font-size: 1.5rem;
+    }
+
+    .search-module-card {
+        padding: 2rem 1.5rem !important;
+    }
+    
+    #store-search-input {
+        height: 65px;
+        font-size: 1.1rem;
+        padding-left: 65px;
+    }
+
+    .search-icon-main {
+        font-size: 1.3rem;
+        left: 25px;
+    }
+}
